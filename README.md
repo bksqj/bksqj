@@ -1,10 +1,8 @@
 ### 🖥️ Привет, я <b>bksqj</b>!  
 ### 🔥 Fullstack-разработчик | Python | C++ | Open Source | Security
 
-<p align="center">
+<p align="left">
   <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&width=435&lines=F**CK+YOU" alt="Typing SVG" /></a>
-<p align="center">
-  <img width="300" src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExa294dGx4dGZ4M2R4NjN1ZG11dGx2dWJ5dGJ6aGZ1Y2Z2dGJ2dGZ6NyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o7TKsQ8UOEIYvuRyU/giphy.gif " alt="coding animation">
 </p>
 
 ---
