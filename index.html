@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ДентаЛюкс — стоматология, в которую хочется возвращаться | Москва</title>
+  <meta name="description" content="Современная стоматологическая клиника ДентаЛюкс в Москве: безболезненное лечение, гарантия на все виды работ, запись день в день, прозрачные цены. Терапия, имплантация, ортодонтия, детская стоматология." />
+  <meta name="keywords" content="стоматология, стоматологическая клиника, лечение зубов, имплантация, отбеливание, брекеты, детская стоматология, Москва" />
+  <meta name="theme-color" content="#2FD5C8" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="ДентаЛюкс — стоматология, в которую хочется возвращаться" />
+  <meta property="og:description" content="Безболезненное лечение, гарантия на все виды работ, запись день в день. Запишитесь на приём онлайн." />
+  <meta property="og:locale" content="ru_RU" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Structured data for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Dentist",
+    "name": "ДентаЛюкс",
+    "description": "Современная стоматологическая клиника в Москве",
+    "telephone": "+7 (495) 000-00-00",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "ул. Примерная, д. 12",
+      "addressLocality": "Москва",
+      "addressCountry": "RU"
+    },
+    "openingHours": "Mo-Su 09:00-21:00",
+    "priceRange": "₽₽"
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#hero" class="logo" aria-label="ДентаЛюкс — на главную">
+        <span class="logo__icon" aria-hidden="true">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 3C9 3 8 4.5 6 4.5S3 3.5 3 6c0 3 1 5 1.8 8.2C5.4 16.6 6 21 7.5 21c1.2 0 1.3-2.5 1.9-4.2.4-1.1.9-1.8 2.6-1.8s2.2.7 2.6 1.8c.6 1.7.7 4.2 1.9 4.2 1.5 0 2.1-4.4 2.7-6.8C21 11 22 9 22 6c0-2.5-1-1.5-3-1.5S15 3 12 3Z" fill="currentColor"/>
+          </svg>
+        </span>
+        <span class="logo__text">Дента<span>Люкс</span></span>
+      </a>
+
+      <nav class="nav" aria-label="Основная навигация">
+        <a href="#services">Услуги</a>
+        <a href="#why">Почему мы</a>
+        <a href="#doctors">Врачи</a>
+        <a href="#pricing">Цены</a>
+        <a href="#reviews">Отзывы</a>
+        <a href="#footer">Контакты</a>
+      </nav>
+
+      <div class="header__actions">
+        <a href="tel:+74950000000" class="header__phone" aria-label="Позвонить по телефону">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.3 1.1L6.6 10.8Z" fill="currentColor"/></svg>
+          <span>+7 (495) 000-00-00</span>
+        </a>
+        <button class="btn btn--primary" data-open-modal>Записаться на приём</button>
+        <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobileMenu" hidden>
+      <a href="#services">Услуги</a>
+      <a href="#why">Почему мы</a>
+      <a href="#doctors">Врачи</a>
+      <a href="#pricing">Цены</a>
+      <a href="#reviews">Отзывы</a>
+      <a href="#footer">Контакты</a>
+      <a href="tel:+74950000000" class="mobile-menu__phone">+7 (495) 000-00-00</a>
+      <button class="btn btn--primary btn--block" data-open-modal>Записаться на приём</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="hero">
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <span class="badge badge--soft reveal" data-reveal>🦷 Клиника нового поколения</span>
+          <h1 class="hero__title">
+            <span class="reveal" data-reveal>Стоматология,</span>
+            <span class="reveal" data-reveal>в которую хочется</span>
+            <span class="reveal" data-reveal><em>возвращаться</em></span>
+          </h1>
+          <p class="hero__subtitle reveal" data-reveal>
+            Безболезненное лечение на современном оборудовании, честные цены
+            и гарантия на все виды работ. Заботимся о вашей улыбке — с первого визита.
+          </p>
+          <div class="hero__cta reveal" data-reveal>
+            <button class="btn btn--primary btn--lg" data-open-modal>Записаться на приём</button>
+            <button class="btn btn--ghost btn--lg" data-open-quiz>Рассчитать стоимость лечения</button>
+          </div>
+          <ul class="hero__bullets reveal" data-reveal>
+            <li><span class="check" aria-hidden="true">✓</span> Современное оборудование</li>
+            <li><span class="check" aria-hidden="true">✓</span> Гарантия на все виды работ</li>
+            <li><span class="check" aria-hidden="true">✓</span> Без очередей — запись день в день</li>
+            <li><span class="check" aria-hidden="true">✓</span> Прозрачные цены без скрытых доплат</li>
+          </ul>
+        </div>
+
+        <div class="hero__visual reveal" data-reveal>
+          <div class="hero__card">
+            <div class="hero__card-glow" aria-hidden="true"></div>
+            <div class="hero__stat">
+              <div class="stat">
+                <span class="stat__num" data-count="15" data-suffix="+">0</span>
+                <span class="stat__label">лет опыта</span>
+              </div>
+              <div class="stat">
+                <span class="stat__num" data-count="24000" data-suffix="+">0</span>
+                <span class="stat__label">довольных пациентов</span>
+              </div>
+              <div class="stat">
+                <span class="stat__num" data-count="18">0</span>
+                <span class="stat__label">врачей-экспертов</span>
+              </div>
+              <div class="stat">
+                <span class="stat__num" data-count="98" data-suffix="%">0</span>
+                <span class="stat__label">рекомендуют нас</span>
+              </div>
+            </div>
+            <div class="hero__card-foot">
+              <div class="avatars" aria-hidden="true">
+                <span style="--i:0">АК</span><span style="--i:1">МС</span><span style="--i:2">ЕВ</span><span style="--i:3">+</span>
+              </div>
+              <p>Средняя оценка <strong>4.9 / 5.0</strong> по 2 300+ отзывам</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== WHY US ===================== -->
+    <section class="section" id="why">
+      <div class="container">
+        <div class="section__head reveal" data-reveal>
+          <span class="eyebrow">Почему мы</span>
+          <h2 class="section__title">Причин доверить нам улыбку — больше, чем вы думаете</h2>
+          <p class="section__lead">Мы объединили опытных врачей, современные технологии и честный подход к каждому пациенту.</p>
+        </div>
+        <div class="grid grid--3">
+          <article class="card card--why reveal" data-reveal>
+            <span class="card__icon">⚡</span>
+            <h3>Быстрая запись</h3>
+            <p>Свободные окна день в день. Никаких недель ожидания — примем, когда удобно вам.</p>
+          </article>
+          <article class="card card--why reveal" data-reveal>
+            <span class="card__icon">🛡️</span>
+            <h3>Гарантия</h3>
+            <p>Официальная гарантия на все виды работ. Всё зафиксировано в договоре.</p>
+          </article>
+          <article class="card card--why reveal" data-reveal>
+            <span class="card__icon">📋</span>
+            <h3>Индивидуальный план</h3>
+            <p>Составим прозрачный план лечения с этапами и сроками ещё до начала работ.</p>
+          </article>
+          <article class="card card--why reveal" data-reveal>
+            <span class="card__icon">😌</span>
+            <h3>Комфорт и без боли</h3>
+            <p>Современная анестезия и седация. Лечение проходит спокойно, даже если вы боитесь.</p>
+          </article>
+          <article class="card card--why reveal" data-reveal>
+            <span class="card__icon">💳</span>
+            <h3>Прозрачные цены</h3>
+            <p>Стоимость известна заранее. Никаких скрытых доплат «по ходу дела».</p>
+          </article>
+          <article class="card card--why reveal" data-reveal>
+            <span class="card__icon">🔑</span>
+            <h3>Работа «под ключ»</h3>
+            <p>От диагностики до финальной установки — всё в одной клинике и одной команде.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SERVICES (marquee) ===================== -->
+    <section class="section section--tint" id="services">
+      <div class="container">
+        <div class="section__head reveal" data-reveal>
+          <span class="eyebrow">Услуги</span>
+          <h2 class="section__title">Полный спектр стоматологической помощи</h2>
+          <p class="section__lead">Выберите направление — расскажем подробнее и подберём решение под вашу ситуацию.</p>
+        </div>
+      </div>
+
+      <div class="marquee" aria-label="Список услуг">
+        <div class="marquee__track">
+          <!-- track content is duplicated in JS for seamless loop -->
+          <article class="service-card">
+            <span class="service-card__icon">🦷</span>
+            <h3>Терапия</h3>
+            <p>Лечение кариеса, пульпита и реставрация зубов без боли.</p>
+            <a href="#quiz" data-open-quiz class="link-arrow">Подробнее →</a>
+          </article>
+          <article class="service-card">
+            <span class="badge badge--hit">ХИТ</span>
+            <span class="service-card__icon">🔩</span>
+            <h3>Имплантация</h3>
+            <p>Импланты премиум-систем с пожизненной гарантией на изделие.</p>
+            <a href="#quiz" data-open-quiz class="link-arrow">Подробнее →</a>
+          </article>
+          <article class="service-card">
+            <span class="service-card__icon">😁</span>
+            <h3>Ортодонтия</h3>
+            <p>Брекеты и элайнеры. Ровные зубы без компромиссов для эстетики.</p>
+            <a href="#quiz" data-open-quiz class="link-arrow">Подробнее →</a>
+          </article>
+          <article class="service-card">
+            <span class="service-card__icon">👑</span>
+            <h3>Протезирование</h3>
+            <p>Коронки, виниры и мосты. Естественный вид и надёжность.</p>
+            <a href="#quiz" data-open-quiz class="link-arrow">Подробнее →</a>
+          </article>
+          <article class="service-card">
+            <span class="service-card__icon">🔪</span>
+            <h3>Хирургия</h3>
+            <p>Аккуратное удаление и костная пластика опытными хирургами.</p>
+            <a href="#quiz" data-open-quiz class="link-arrow">Подробнее →</a>
+          </article>
+          <article class="service-card">
+            <span class="badge badge--hit">ХИТ</span>
+            <span class="service-card__icon">✨</span>
+            <h3>Гигиена и отбеливание</h3>
+            <p>Профчистка Air Flow и отбеливание до 8 тонов за визит.</p>
+            <a href="#quiz" data-open-quiz class="link-arrow">Подробнее →</a>
+          </article>
+          <article class="service-card">
+            <span class="service-card__icon">🧸</span>
+            <h3>Детская стоматология</h3>
+            <p>Бережно и в игровой форме. Дети уходят с улыбкой, а не в слезах.</p>
+            <a href="#quiz" data-open-quiz class="link-arrow">Подробнее →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SOLUTION PATHS ===================== -->
+    <section class="section" id="paths">
+      <div class="container">
+        <div class="section__head reveal" data-reveal>
+          <span class="eyebrow">Варианты решений</span>
+          <h2 class="section__title">Выберите формат, который подходит именно вам</h2>
+        </div>
+        <div class="grid grid--2">
+          <article class="path-card reveal" data-reveal>
+            <div class="path-card__head">
+              <span class="path-card__tag">Быстро и точечно</span>
+              <h3>Разовое лечение</h3>
+            </div>
+            <p>Беспокоит конкретный зуб или нужна чистка? Решим одну задачу качественно и без навязывания лишнего.</p>
+            <ul class="path-card__list">
+              <li><span class="check">✓</span> Диагностика и точный план</li>
+              <li><span class="check">✓</span> Фиксированная стоимость визита</li>
+              <li><span class="check">✓</span> Гарантия на выполненную работу</li>
+            </ul>
+            <button class="btn btn--primary btn--block" data-open-modal>Записаться на приём</button>
+          </article>
+
+          <article class="path-card path-card--accent reveal" data-reveal>
+            <span class="badge badge--hit path-card__badge">Выгоднее</span>
+            <div class="path-card__head">
+              <span class="path-card__tag">Комплексно и в рассрочку</span>
+              <h3>Комплексный план</h3>
+            </div>
+            <p>Приведём полость рта в порядок «под ключ»: этапы, сроки и общая смета заранее. Доступна рассрочка 0%.</p>
+            <ul class="path-card__list">
+              <li><span class="check">✓</span> Индивидуальный план лечения</li>
+              <li><span class="check">✓</span> Скидка до 15% на комплекс</li>
+              <li><span class="check">✓</span> Рассрочка 0% до 12 месяцев</li>
+            </ul>
+            <button class="btn btn--primary btn--block" data-open-quiz>Рассчитать стоимость</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== DOCTORS ===================== -->
+    <section class="section section--tint" id="doctors">
+      <div class="container">
+        <div class="section__head reveal" data-reveal>
+          <span class="eyebrow">Наши врачи</span>
+          <h2 class="section__title">Команда, которой доверяют улыбки</h2>
+          <p class="section__lead">Врачи с профильным образованием и постоянной практикой. Регулярно повышают квалификацию.</p>
+        </div>
+        <div class="grid grid--4">
+          <article class="doctor reveal" data-reveal>
+            <div class="doctor__photo" style="--c1:#2FD5C8;--c2:#3EA6FF" aria-hidden="true"><span>АК</span></div>
+            <h3>Анна Ковалёва</h3>
+            <p class="doctor__spec">Стоматолог-терапевт</p>
+            <p class="doctor__exp">Стаж 12 лет</p>
+          </article>
+          <article class="doctor reveal" data-reveal>
+            <div class="doctor__photo" style="--c1:#3EA6FF;--c2:#7B61FF" aria-hidden="true"><span>МС</span></div>
+            <h3>Михаил Соколов</h3>
+            <p class="doctor__spec">Хирург-имплантолог</p>
+            <p class="doctor__exp">Стаж 16 лет</p>
+          </article>
+          <article class="doctor reveal" data-reveal>
+            <div class="doctor__photo" style="--c1:#2FD5C8;--c2:#57E39B" aria-hidden="true"><span>ЕВ</span></div>
+            <h3>Елена Волкова</h3>
+            <p class="doctor__spec">Врач-ортодонт</p>
+            <p class="doctor__exp">Стаж 10 лет</p>
+          </article>
+          <article class="doctor reveal" data-reveal>
+            <div class="doctor__photo" style="--c1:#FFB65C;--c2:#FF7A7A" aria-hidden="true"><span>ДП</span></div>
+            <h3>Дмитрий Петров</h3>
+            <p class="doctor__spec">Детский стоматолог</p>
+            <p class="doctor__exp">Стаж 9 лет</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FOR WHOM ===================== -->
+    <section class="section" id="forwhom">
+      <div class="container">
+        <div class="section__head reveal" data-reveal>
+          <span class="eyebrow">Для кого мы</span>
+          <h2 class="section__title">Найдём подход к каждому пациенту</h2>
+        </div>
+        <div class="grid grid--4">
+          <article class="usecase card reveal" data-reveal>
+            <span class="card__icon">🧑‍💼</span>
+            <h3>Для взрослых</h3>
+            <p>Полный цикл лечения и профилактики для занятых людей — быстро и по записи.</p>
+          </article>
+          <article class="usecase card reveal" data-reveal>
+            <span class="card__icon">🧒</span>
+            <h3>Для детей</h3>
+            <p>Отдельный детский приём в игровой форме. Формируем любовь к стоматологу с детства.</p>
+          </article>
+          <article class="usecase card reveal" data-reveal>
+            <span class="card__icon">🫧</span>
+            <h3>Для тех, кто боится</h3>
+            <p>Седация и максимально бережный подход. Лечение без стресса и боли.</p>
+          </article>
+          <article class="usecase card reveal" data-reveal>
+            <span class="card__icon">🏢</span>
+            <h3>Корпоративные программы</h3>
+            <p>Работаем по ДМС и заключаем договоры на обслуживание сотрудников компаний.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== REVIEWS ===================== -->
+    <section class="section section--tint" id="reviews">
+      <div class="container">
+        <div class="section__head reveal" data-reveal>
+          <span class="eyebrow">Отзывы</span>
+          <h2 class="section__title">Что говорят наши пациенты</h2>
+        </div>
+        <div class="grid grid--3">
+          <article class="review reveal" data-reveal>
+            <div class="review__stars" aria-label="Оценка 5 из 5">★★★★★</div>
+            <p class="review__text">«Всю жизнь боялась стоматологов, а здесь впервые лечилась спокойно. Аккуратно, всё объяснили заранее и по цене — как договаривались.»</p>
+            <div class="review__author">
+              <span class="review__avatar" style="--c1:#2FD5C8;--c2:#3EA6FF">ОМ</span>
+              <div><strong>Ольга М.</strong><span>Лечение кариеса</span></div>
+            </div>
+          </article>
+          <article class="review reveal" data-reveal>
+            <div class="review__stars" aria-label="Оценка 5 из 5">★★★★★</div>
+            <p class="review__text">«Ставил импланты у Михаила — всё прошло идеально, без отёков и боли. Спустя год всё отлично. Рекомендую от души.»</p>
+            <div class="review__author">
+              <span class="review__avatar" style="--c1:#3EA6FF;--c2:#7B61FF">ИК</span>
+              <div><strong>Игорь К.</strong><span>Имплантация</span></div>
+            </div>
+          </article>
+          <article class="review reveal" data-reveal>
+            <div class="review__stars" aria-label="Оценка 5 из 5">★★★★★</div>
+            <p class="review__text">«Водим сюда сына, ему нравится ходить к врачу — это ли не чудо? Доктор нашла подход, ребёнок не боится.»</p>
+            <div class="review__author">
+              <span class="review__avatar" style="--c1:#2FD5C8;--c2:#57E39B">НС</span>
+              <div><strong>Наталья С.</strong><span>Детская стоматология</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PROCESS ===================== -->
+    <section class="section" id="process">
+      <div class="container">
+        <div class="section__head reveal" data-reveal>
+          <span class="eyebrow">Как мы работаем</span>
+          <h2 class="section__title">Понятный путь от заявки до здоровой улыбки</h2>
+        </div>
+        <div class="steps">
+          <article class="step reveal" data-reveal>
+            <span class="step__num">1</span>
+            <h3>Заявка и запись</h3>
+            <p>Оставляете заявку — перезваниваем в течение 15 минут и подбираем удобное время.</p>
+            <span class="step__time">≈ 15 минут</span>
+          </article>
+          <article class="step reveal" data-reveal>
+            <span class="step__num">2</span>
+            <h3>Диагностика и план</h3>
+            <p>Осмотр, снимок и прозрачный план лечения с этапами, сроками и финальной сметой.</p>
+            <span class="step__time">1 визит</span>
+          </article>
+          <article class="step reveal" data-reveal>
+            <span class="step__num">3</span>
+            <h3>Лечение</h3>
+            <p>Комфортное лечение по согласованному плану. Держим вас в курсе на каждом этапе.</p>
+            <span class="step__time">по плану</span>
+          </article>
+          <article class="step reveal" data-reveal>
+            <span class="step__num">4</span>
+            <h3>Гарантийное сопровождение</h3>
+            <p>Плановые осмотры и гарантия на работы. Остаёмся на связи и после лечения.</p>
+            <span class="step__time">постоянно</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PRICING ===================== -->
+    <section class="section section--tint" id="pricing">
+      <div class="container">
+        <div class="section__head reveal" data-reveal>
+          <span class="eyebrow">Цены</span>
+          <h2 class="section__title">Честные цены на популярные услуги</h2>
+          <p class="section__lead">Указаны цены «от». Точную стоимость назовём после осмотра — без сюрпризов.</p>
+        </div>
+        <div class="pricing reveal" data-reveal>
+          <table class="pricing__table">
+            <thead>
+              <tr><th scope="col">Услуга</th><th scope="col">Стоимость</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Консультация и осмотр</td><td>бесплатно</td></tr>
+              <tr><td>Лечение кариеса</td><td>от 3 500 ₽</td></tr>
+              <tr><td>Профессиональная гигиена Air Flow</td><td>от 4 900 ₽</td></tr>
+              <tr><td>Отбеливание зубов</td><td>от 18 000 ₽</td></tr>
+              <tr><td>Установка импланта «под ключ»</td><td>от 35 000 ₽</td></tr>
+              <tr><td>Металлокерамическая коронка</td><td>от 14 000 ₽</td></tr>
+              <tr><td>Брекет-система (за 1 челюсть)</td><td>от 45 000 ₽</td></tr>
+            </tbody>
+          </table>
+          <div class="pricing__cta">
+            <p>Нужна точная смета под вашу ситуацию?</p>
+            <button class="btn btn--primary btn--lg" data-open-quiz>Рассчитать стоимость лечения</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FAQ ===================== -->
+    <section class="section" id="faq">
+      <div class="container container--narrow">
+        <div class="section__head reveal" data-reveal>
+          <span class="eyebrow">Вопросы и ответы</span>
+          <h2 class="section__title">Отвечаем на частые вопросы</h2>
+        </div>
+        <div class="faq">
+          <div class="faq__item reveal" data-reveal>
+            <button class="faq__q" aria-expanded="false">
+              <span>Сколько стоит лечение?</span><span class="faq__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq__a"><p>Стоимость зависит от объёма работ. На консультации мы проводим осмотр и составляем точную смету — вы заранее знаете финальную цену. Консультация бесплатна.</p></div>
+          </div>
+          <div class="faq__item reveal" data-reveal>
+            <button class="faq__q" aria-expanded="false">
+              <span>Есть ли рассрочка?</span><span class="faq__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq__a"><p>Да, доступна рассрочка 0% до 12 месяцев на комплексное лечение. Условия обсудим на приёме — оформление занимает несколько минут.</p></div>
+          </div>
+          <div class="faq__item reveal" data-reveal>
+            <button class="faq__q" aria-expanded="false">
+              <span>Это точно безболезненно?</span><span class="faq__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq__a"><p>Мы используем современную анестезию, а для особо тревожных пациентов — седацию. Подавляющее большинство процедур проходит абсолютно комфортно.</p></div>
+          </div>
+          <div class="faq__item reveal" data-reveal>
+            <button class="faq__q" aria-expanded="false">
+              <span>Какие гарантии вы даёте?</span><span class="faq__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq__a"><p>На все виды работ действует официальная гарантия, зафиксированная в договоре. На импланты премиум-систем — пожизненная гарантия производителя на изделие.</p></div>
+          </div>
+          <div class="faq__item reveal" data-reveal>
+            <button class="faq__q" aria-expanded="false">
+              <span>Как записаться на приём?</span><span class="faq__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq__a"><p>Нажмите «Записаться на приём» или оставьте заявку через калькулятор. Мы перезвоним в течение 15 минут и подберём удобное время — часто в тот же день.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== QUIZ / CALCULATOR ===================== -->
+    <section class="section section--cta" id="quiz">
+      <div class="container container--narrow">
+        <div class="section__head reveal" data-reveal>
+          <span class="eyebrow">Калькулятор</span>
+          <h2 class="section__title">Рассчитайте стоимость лечения за 30 секунд</h2>
+          <p class="section__lead">Ответьте на 3 вопроса — и мы свяжемся с предварительным расчётом и удобным временем визита.</p>
+        </div>
+        <div class="quiz reveal" data-reveal id="quizWidget">
+          <div class="quiz__progress"><span class="quiz__progress-bar" id="quizBar"></span></div>
+          <form class="quiz__form" id="quizForm" novalidate>
+            <!-- steps injected/handled by JS -->
+            <div class="quiz__viewport">
+              <!-- Step 1 -->
+              <fieldset class="quiz__step is-active" data-step="1">
+                <legend class="quiz__legend">Какая услуга вас интересует?</legend>
+                <div class="quiz__options" role="radiogroup" aria-label="Услуга">
+                  <label class="quiz__opt"><input type="radio" name="service" value="Терапия / лечение зубов" required><span>🦷 Лечение зубов</span></label>
+                  <label class="quiz__opt"><input type="radio" name="service" value="Имплантация"><span>🔩 Имплантация</span></label>
+                  <label class="quiz__opt"><input type="radio" name="service" value="Ортодонтия (брекеты/элайнеры)"><span>😁 Брекеты / элайнеры</span></label>
+                  <label class="quiz__opt"><input type="radio" name="service" value="Гигиена и отбеливание"><span>✨ Гигиена / отбеливание</span></label>
+                  <label class="quiz__opt"><input type="radio" name="service" value="Детская стоматология"><span>🧸 Детская стоматология</span></label>
+                  <label class="quiz__opt"><input type="radio" name="service" value="Ещё не определился"><span>🤔 Пока не знаю</span></label>
+                </div>
+                <p class="quiz__error" data-error></p>
+              </fieldset>
+
+              <!-- Step 2 -->
+              <fieldset class="quiz__step" data-step="2" hidden>
+                <legend class="quiz__legend">Насколько срочно нужна помощь?</legend>
+                <div class="quiz__options" role="radiogroup" aria-label="Срочность">
+                  <label class="quiz__opt"><input type="radio" name="urgency" value="Острая боль — нужно срочно" required><span>🚑 Острая боль, срочно</span></label>
+                  <label class="quiz__opt"><input type="radio" name="urgency" value="В ближайшие дни"><span>📅 В ближайшие дни</span></label>
+                  <label class="quiz__opt"><input type="radio" name="urgency" value="Планирую, время терпит"><span>🗓️ Планирую заранее</span></label>
+                </div>
+                <p class="quiz__error" data-error></p>
+              </fieldset>
+
+              <!-- Step 3 -->
+              <fieldset class="quiz__step" data-step="3" hidden>
+                <legend class="quiz__legend">Как с вами удобно связаться?</legend>
+                <div class="quiz__field">
+                  <label for="qName">Ваше имя</label>
+                  <input type="text" id="qName" name="name" placeholder="Например, Ирина" required autocomplete="name">
+                </div>
+                <div class="quiz__field">
+                  <label for="qPhone">Телефон или Telegram</label>
+                  <input type="text" id="qPhone" name="contact" placeholder="+7 (___) ___-__-__ или @username" required autocomplete="tel">
+                </div>
+                <div class="quiz__radios" role="radiogroup" aria-label="Способ связи">
+                  <label class="quiz__chip"><input type="radio" name="channel" value="Телефонный звонок" checked><span>📞 Позвонить</span></label>
+                  <label class="quiz__chip"><input type="radio" name="channel" value="Telegram"><span>✈️ Telegram</span></label>
+                  <label class="quiz__chip"><input type="radio" name="channel" value="WhatsApp"><span>💬 WhatsApp</span></label>
+                </div>
+                <label class="quiz__consent">
+                  <input type="checkbox" name="consent" required>
+                  <span>Я согласен(-на) на обработку персональных данных согласно <a href="#privacy" data-open-privacy>политике конфиденциальности</a>.</span>
+                </label>
+                <p class="quiz__error" data-error></p>
+              </fieldset>
+
+              <!-- Success -->
+              <div class="quiz__step quiz__success" data-step="done" hidden>
+                <div class="quiz__success-icon" aria-hidden="true">✓</div>
+                <h3>Заявка отправлена!</h3>
+                <p>Спасибо! Мы свяжемся с вами в течение 15 минут в рабочее время и назовём предварительную стоимость.</p>
+                <button type="button" class="btn btn--ghost" data-quiz-restart>Отправить ещё одну заявку</button>
+              </div>
+            </div>
+
+            <div class="quiz__nav" id="quizNav">
+              <button type="button" class="btn btn--ghost" id="quizBack" hidden>← Назад</button>
+              <span class="quiz__counter" id="quizCounter">Шаг 1 из 3</span>
+              <button type="button" class="btn btn--primary" id="quizNext">Далее →</button>
+              <button type="submit" class="btn btn--primary" id="quizSubmit" hidden>Отправить заявку</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer" id="footer">
+    <div class="container footer__inner">
+      <div class="footer__col footer__brand">
+        <a href="#hero" class="logo logo--light">
+          <span class="logo__icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 3C9 3 8 4.5 6 4.5S3 3.5 3 6c0 3 1 5 1.8 8.2C5.4 16.6 6 21 7.5 21c1.2 0 1.3-2.5 1.9-4.2.4-1.1.9-1.8 2.6-1.8s2.2.7 2.6 1.8c.6 1.7.7 4.2 1.9 4.2 1.5 0 2.1-4.4 2.7-6.8C21 11 22 9 22 6c0-2.5-1-1.5-3-1.5S15 3 12 3Z" fill="currentColor"/></svg>
+          </span>
+          <span class="logo__text">Дента<span>Люкс</span></span>
+        </a>
+        <p>Современная стоматология с заботой о каждой улыбке. Лечим бережно, честно и с гарантией.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Контакты</h4>
+        <a href="tel:+74950000000">+7 (495) 000-00-00</a>
+        <a href="mailto:hello@dentalux.example">hello@dentalux.example</a>
+        <p>Москва, ул. Примерная, д. 12</p>
+        <p>Ежедневно 09:00–21:00</p>
+      </div>
+      <div class="footer__col">
+        <h4>Мессенджеры</h4>
+        <a href="#" aria-label="Telegram">✈️ Telegram</a>
+        <a href="#" aria-label="WhatsApp">💬 WhatsApp</a>
+        <a href="#" aria-label="ВКонтакте">🔵 ВКонтакте</a>
+      </div>
+      <div class="footer__col">
+        <h4>Компания</h4>
+        <a href="#services">Услуги</a>
+        <a href="#pricing">Цены</a>
+        <a href="#privacy" data-open-privacy>Политика конфиденциальности</a>
+        <button class="btn btn--primary" data-open-modal>Записаться</button>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <p>© 2026 ДентаЛюкс. ООО «ДентаЛюкс», ИНН 0000000000. Все права защищены.</p>
+      <p class="footer__disclaimer">Имеются противопоказания. Необходима консультация специалиста.</p>
+    </div>
+  </footer>
+
+  <!-- ===================== MODAL: APPOINTMENT ===================== -->
+  <div class="modal" id="modal" hidden>
+    <div class="modal__overlay" data-close-modal></div>
+    <div class="modal__box" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal__close" data-close-modal aria-label="Закрыть окно">×</button>
+      <h3 id="modalTitle" class="modal__title">Записаться на приём</h3>
+      <p class="modal__lead">Оставьте контакты — перезвоним в течение 15 минут и подберём удобное время.</p>
+      <form class="modal__form" id="appointmentForm" novalidate>
+        <div class="quiz__field">
+          <label for="mName">Ваше имя</label>
+          <input type="text" id="mName" name="name" placeholder="Например, Ирина" required autocomplete="name">
+        </div>
+        <div class="quiz__field">
+          <label for="mPhone">Телефон или Telegram</label>
+          <input type="text" id="mPhone" name="contact" placeholder="+7 (___) ___-__-__ или @username" required autocomplete="tel">
+        </div>
+        <label class="quiz__consent">
+          <input type="checkbox" name="consent" required>
+          <span>Согласен(-на) на обработку персональных данных согласно <a href="#privacy" data-open-privacy>политике конфиденциальности</a>.</span>
+        </label>
+        <p class="quiz__error" data-error></p>
+        <button type="submit" class="btn btn--primary btn--block btn--lg">Отправить заявку</button>
+      </form>
+      <div class="modal__success" hidden>
+        <div class="quiz__success-icon" aria-hidden="true">✓</div>
+        <h3>Заявка отправлена!</h3>
+        <p>Спасибо! Скоро свяжемся с вами.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== MODAL: PRIVACY ===================== -->
+  <div class="modal" id="privacyModal" hidden>
+    <div class="modal__overlay" data-close-privacy></div>
+    <div class="modal__box modal__box--wide" role="dialog" aria-modal="true" aria-labelledby="privacyTitle">
+      <button class="modal__close" data-close-privacy aria-label="Закрыть окно">×</button>
+      <h3 id="privacyTitle" class="modal__title">Политика конфиденциальности</h3>
+      <div class="modal__scroll">
+        <p>Настоящая политика описывает порядок обработки персональных данных, которые вы предоставляете при использовании сайта ДентаЛюкс.</p>
+        <p>Оставляя заявку, вы даёте согласие на обработку указанных данных (имя, контактные данные) с целью связи с вами и записи на приём. Данные не передаются третьим лицам и хранятся с соблюдением требований законодательства РФ.</p>
+        <p>Вы можете отозвать согласие, обратившись по контактам, указанным на сайте. Это демонстрационный текст-заглушка — замените его на актуальную политику вашей организации.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== COOKIE BANNER ===================== -->
+  <div class="cookie" id="cookie" hidden>
+    <p>Мы используем файлы cookie, чтобы сайт работал лучше. Продолжая пользоваться сайтом, вы соглашаетесь на обработку данных.</p>
+    <div class="cookie__actions">
+      <a href="#privacy" data-open-privacy class="cookie__link">Подробнее</a>
+      <button class="btn btn--primary" id="cookieAccept">Принять</button>
+    </div>
+  </div>
+
+  <!-- floating quick-call button -->
+  <a href="tel:+74950000000" class="fab" aria-label="Позвонить в клинику">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.3 1.1L6.6 10.8Z" fill="currentColor"/></svg>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
