@@ -26,24 +26,19 @@
   onScroll();
 
   /* ============================================================
-     Mobile menu
+     Fullscreen menu overlay (toggled by the accent "Меню" pill)
      ============================================================ */
   var burger = $('#burger');
-  var mobileMenu = $('#mobileMenu');
+  var menuOverlay = $('#menuOverlay');
   var toggleMenu = function (open) {
-    var isOpen = open != null ? open : mobileMenu.hasAttribute('hidden');
-    if (isOpen) {
-      mobileMenu.hidden = false;
-      requestAnimationFrame(function () { mobileMenu.classList.add('is-open'); });
-    } else {
-      mobileMenu.classList.remove('is-open');
-      mobileMenu.hidden = true;
-    }
-    burger.classList.toggle('is-open', isOpen);
+    var isOpen = open != null ? open : menuOverlay.hasAttribute('hidden');
+    menuOverlay.hidden = !isOpen;
+    document.body.style.overflow = isOpen ? 'hidden' : '';
     burger.setAttribute('aria-expanded', String(isOpen));
+    burger.textContent = isOpen ? 'Закрыть' : 'Меню';
   };
   burger.addEventListener('click', function () { toggleMenu(); });
-  $$('#mobileMenu a').forEach(function (a) {
+  $$('#menuOverlay a, #menuOverlay [data-open-modal]').forEach(function (a) {
     a.addEventListener('click', function () { toggleMenu(false); });
   });
 
@@ -153,6 +148,7 @@
     if (e.key === 'Escape') {
       if (!modal.hidden) closeModal();
       if (!privacyModal.hidden) closePrivacy();
+      if (!menuOverlay.hidden) toggleMenu(false);
     }
   });
 

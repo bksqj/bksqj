@@ -14,9 +14,6 @@
   <meta property="og:description" content="Безболезненное лечение, гарантия на все виды работ, запись день в день. Запишитесь на приём онлайн." />
   <meta property="og:locale" content="ru_RU" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 
   <!-- Structured data for SEO -->
@@ -40,19 +37,40 @@
 </head>
 <body>
 
-  <!-- ===================== HEADER ===================== -->
+  <!-- ===================== HEADER (floating capsule) ===================== -->
   <header class="header" id="header">
-    <div class="container header__inner">
+    <div class="header__bar">
       <a href="#hero" class="logo" aria-label="ДентаЛюкс — на главную">
-        <span class="logo__icon" aria-hidden="true">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 3C9 3 8 4.5 6 4.5S3 3.5 3 6c0 3 1 5 1.8 8.2C5.4 16.6 6 21 7.5 21c1.2 0 1.3-2.5 1.9-4.2.4-1.1.9-1.8 2.6-1.8s2.2.7 2.6 1.8c.6 1.7.7 4.2 1.9 4.2 1.5 0 2.1-4.4 2.7-6.8C21 11 22 9 22 6c0-2.5-1-1.5-3-1.5S15 3 12 3Z" fill="currentColor"/>
-          </svg>
-        </span>
-        <span class="logo__text">Дента<span>Люкс</span></span>
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M12 3C9 3 8 4.5 6 4.5S3 3.5 3 6c0 3 1 5 1.8 8.2C5.4 16.6 6 21 7.5 21c1.2 0 1.3-2.5 1.9-4.2.4-1.1.9-1.8 2.6-1.8s2.2.7 2.6 1.8c.6 1.7.7 4.2 1.9 4.2 1.5 0 2.1-4.4 2.7-6.8C21 11 22 9 22 6c0-2.5-1-1.5-3-1.5S15 3 12 3Z" fill="currentColor"/>
+        </svg>
+        <span class="logo__text">Дента<em>Люкс</em></span>
       </a>
 
-      <nav class="nav" aria-label="Основная навигация">
+      <nav class="header__nav" aria-label="Основная навигация">
+        <a href="#services">Услуги</a>
+        <a href="#why">Почему мы</a>
+        <a href="#doctors">Врачи</a>
+        <a href="#pricing">Цены</a>
+      </nav>
+
+      <div class="header__actions">
+        <a href="tel:+74950000000" class="icon-btn" aria-label="Позвонить: +7 (495) 000-00-00">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.3 1.1L6.6 10.8Z" fill="currentColor"/></svg>
+        </a>
+        <a href="#" class="icon-btn" aria-label="Написать в Telegram">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21.9 4.6 18.9 19c-.2 1-.8 1.2-1.7.8l-4.6-3.4-2.2 2.1c-.3.3-.5.5-.9.5l.3-4.7L18.4 6c.4-.3-.1-.5-.6-.2L7.3 12.4l-4.5-1.4c-1-.3-1-1 .2-1.4L20.6 3.2c.8-.3 1.5.2 1.3 1.4Z" fill="currentColor"/></svg>
+        </a>
+        <a href="mailto:hello@dentalux.example" class="icon-btn" aria-label="Написать на почту">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4a2 2 0 0 1-2-2V6c0-1.1.9-2 2-2Zm8 7L4 6v12h16V6l-8 5Zm0-2 8-5H4l8 5Z" fill="currentColor"/></svg>
+        </a>
+        <button class="btn btn--accent header__menu-btn" id="burger" aria-expanded="false" aria-controls="menuOverlay">Меню</button>
+      </div>
+    </div>
+
+    <!-- fullscreen menu overlay -->
+    <div class="menu-overlay" id="menuOverlay" hidden>
+      <nav class="menu-overlay__nav" aria-label="Меню">
         <a href="#services">Услуги</a>
         <a href="#why">Почему мы</a>
         <a href="#doctors">Врачи</a>
@@ -60,49 +78,50 @@
         <a href="#reviews">Отзывы</a>
         <a href="#footer">Контакты</a>
       </nav>
-
-      <div class="header__actions">
-        <a href="tel:+74950000000" class="header__phone" aria-label="Позвонить по телефону">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.3 1.1L6.6 10.8Z" fill="currentColor"/></svg>
-          <span>+7 (495) 000-00-00</span>
-        </a>
-        <button class="btn btn--primary" data-open-modal>Записаться на приём</button>
-        <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
+      <div class="menu-overlay__foot">
+        <a href="tel:+74950000000" class="menu-overlay__phone">+7 (495) 000-00-00</a>
+        <button class="btn btn--dark btn--block" data-open-modal>Записаться на приём</button>
       </div>
-    </div>
-    <!-- Mobile menu -->
-    <div class="mobile-menu" id="mobileMenu" hidden>
-      <a href="#services">Услуги</a>
-      <a href="#why">Почему мы</a>
-      <a href="#doctors">Врачи</a>
-      <a href="#pricing">Цены</a>
-      <a href="#reviews">Отзывы</a>
-      <a href="#footer">Контакты</a>
-      <a href="tel:+74950000000" class="mobile-menu__phone">+7 (495) 000-00-00</a>
-      <button class="btn btn--primary btn--block" data-open-modal>Записаться на приём</button>
     </div>
   </header>
 
   <main>
     <!-- ===================== HERO ===================== -->
     <section class="hero" id="hero">
-      <div class="container hero__inner">
+      <div class="container">
+        <div class="hero__media reveal" data-reveal>
+          <div class="hero__scene" aria-hidden="true">
+            <span class="hero__tooth">🦷</span>
+            <span class="hero__spark hero__spark--1">✨</span>
+            <span class="hero__spark hero__spark--2">✨</span>
+          </div>
+          <div class="glass-chip hero__chip hero__chip--1">
+            <span class="glass-chip__icon">😌</span>
+            <span>Лечение без боли<br>и стресса</span>
+          </div>
+          <div class="glass-chip hero__chip hero__chip--2">
+            <span class="glass-chip__icon">🛡️</span>
+            <span>Гарантия на все<br>виды работ</span>
+          </div>
+          <button class="hero__chat" data-open-modal aria-label="Открыть форму записи">💬</button>
+        </div>
+
         <div class="hero__content">
-          <span class="badge badge--soft reveal" data-reveal>🦷 Клиника нового поколения</span>
           <h1 class="hero__title">
             <span class="reveal" data-reveal>Стоматология,</span>
             <span class="reveal" data-reveal>в которую хочется</span>
-            <span class="reveal" data-reveal><em>возвращаться</em></span>
+            <span class="reveal" data-reveal>возвращаться</span>
           </h1>
           <p class="hero__subtitle reveal" data-reveal>
             Безболезненное лечение на современном оборудовании, честные цены
-            и гарантия на все виды работ. Заботимся о вашей улыбке — с первого визита.
+            и гарантия на все виды работ — с первого визита.
           </p>
           <div class="hero__cta reveal" data-reveal>
-            <button class="btn btn--primary btn--lg" data-open-modal>Записаться на приём</button>
-            <button class="btn btn--ghost btn--lg" data-open-quiz>Рассчитать стоимость лечения</button>
+            <button class="btn btn--dark btn--xl" data-open-quiz>
+              Рассчитать стоимость
+              <span class="btn__pill">⚡ 30 сек</span>
+            </button>
+            <button class="btn btn--white btn--xl" data-open-modal>Записаться на приём</button>
           </div>
           <ul class="hero__bullets reveal" data-reveal>
             <li><span class="check" aria-hidden="true">✓</span> Современное оборудование</li>
@@ -112,33 +131,22 @@
           </ul>
         </div>
 
-        <div class="hero__visual reveal" data-reveal>
-          <div class="hero__card">
-            <div class="hero__card-glow" aria-hidden="true"></div>
-            <div class="hero__stat">
-              <div class="stat">
-                <span class="stat__num" data-count="15" data-suffix="+">0</span>
-                <span class="stat__label">лет опыта</span>
-              </div>
-              <div class="stat">
-                <span class="stat__num" data-count="24000" data-suffix="+">0</span>
-                <span class="stat__label">довольных пациентов</span>
-              </div>
-              <div class="stat">
-                <span class="stat__num" data-count="18">0</span>
-                <span class="stat__label">врачей-экспертов</span>
-              </div>
-              <div class="stat">
-                <span class="stat__num" data-count="98" data-suffix="%">0</span>
-                <span class="stat__label">рекомендуют нас</span>
-              </div>
-            </div>
-            <div class="hero__card-foot">
-              <div class="avatars" aria-hidden="true">
-                <span style="--i:0">АК</span><span style="--i:1">МС</span><span style="--i:2">ЕВ</span><span style="--i:3">+</span>
-              </div>
-              <p>Средняя оценка <strong>4.9 / 5.0</strong> по 2 300+ отзывам</p>
-            </div>
+        <div class="stats reveal" data-reveal>
+          <div class="stat">
+            <span class="stat__num" data-count="15" data-suffix="+">0</span>
+            <span class="stat__label">лет опыта</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num" data-count="24000" data-suffix="+">0</span>
+            <span class="stat__label">довольных пациентов</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num" data-count="18">0</span>
+            <span class="stat__label">врачей-экспертов</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num" data-count="98" data-suffix="%">0</span>
+            <span class="stat__label">рекомендуют нас</span>
           </div>
         </div>
       </div>
@@ -148,98 +156,108 @@
     <section class="section" id="why">
       <div class="container">
         <div class="section__head reveal" data-reveal>
-          <span class="eyebrow">Почему мы</span>
-          <h2 class="section__title">Причин доверить нам улыбку — больше, чем вы думаете</h2>
-          <p class="section__lead">Мы объединили опытных врачей, современные технологии и честный подход к каждому пациенту.</p>
+          <span class="chip">Преимущества</span>
+          <h2 class="section__title">Почему выбирают нас</h2>
         </div>
         <div class="grid grid--3">
-          <article class="card card--why reveal" data-reveal>
-            <span class="card__icon">⚡</span>
-            <h3>Быстрая запись</h3>
-            <p>Свободные окна день в день. Никаких недель ожидания — примем, когда удобно вам.</p>
+          <article class="gcard reveal" data-reveal style="--tint:#d9f6f3">
+            <div class="gcard__caption">
+              <span class="gcard__dot" aria-hidden="true">⚡</span>
+              <div><h3>Быстрая запись</h3><p>Свободные окна день в день. Никаких недель ожидания</p></div>
+            </div>
+            <span class="gcard__art" aria-hidden="true">⚡</span>
           </article>
-          <article class="card card--why reveal" data-reveal>
-            <span class="card__icon">🛡️</span>
-            <h3>Гарантия</h3>
-            <p>Официальная гарантия на все виды работ. Всё зафиксировано в договоре.</p>
+          <article class="gcard reveal" data-reveal style="--tint:#e3f0ff">
+            <div class="gcard__caption">
+              <span class="gcard__dot" aria-hidden="true">🛡️</span>
+              <div><h3>Гарантия</h3><p>Официальная гарантия на все виды работ, всё в договоре</p></div>
+            </div>
+            <span class="gcard__art" aria-hidden="true">🛡️</span>
           </article>
-          <article class="card card--why reveal" data-reveal>
-            <span class="card__icon">📋</span>
-            <h3>Индивидуальный план</h3>
-            <p>Составим прозрачный план лечения с этапами и сроками ещё до начала работ.</p>
+          <article class="gcard reveal" data-reveal style="--tint:#e7f9e9">
+            <div class="gcard__caption">
+              <span class="gcard__dot" aria-hidden="true">📋</span>
+              <div><h3>Индивидуальный план</h3><p>Прозрачный план лечения с этапами и сроками — до начала работ</p></div>
+            </div>
+            <span class="gcard__art" aria-hidden="true">📋</span>
           </article>
-          <article class="card card--why reveal" data-reveal>
-            <span class="card__icon">😌</span>
-            <h3>Комфорт и без боли</h3>
-            <p>Современная анестезия и седация. Лечение проходит спокойно, даже если вы боитесь.</p>
+          <article class="gcard reveal" data-reveal style="--tint:#fdf1e2">
+            <div class="gcard__caption">
+              <span class="gcard__dot" aria-hidden="true">😌</span>
+              <div><h3>Комфорт и без боли</h3><p>Современная анестезия и седация — спокойно, даже если страшно</p></div>
+            </div>
+            <span class="gcard__art" aria-hidden="true">😌</span>
           </article>
-          <article class="card card--why reveal" data-reveal>
-            <span class="card__icon">💳</span>
-            <h3>Прозрачные цены</h3>
-            <p>Стоимость известна заранее. Никаких скрытых доплат «по ходу дела».</p>
+          <article class="gcard reveal" data-reveal style="--tint:#f0e9ff">
+            <div class="gcard__caption">
+              <span class="gcard__dot" aria-hidden="true">💳</span>
+              <div><h3>Прозрачные цены</h3><p>Стоимость известна заранее. Никаких скрытых доплат</p></div>
+            </div>
+            <span class="gcard__art" aria-hidden="true">💳</span>
           </article>
-          <article class="card card--why reveal" data-reveal>
-            <span class="card__icon">🔑</span>
-            <h3>Работа «под ключ»</h3>
-            <p>От диагностики до финальной установки — всё в одной клинике и одной команде.</p>
+          <article class="gcard reveal" data-reveal style="--tint:#dff5f9">
+            <div class="gcard__caption">
+              <span class="gcard__dot" aria-hidden="true">🔑</span>
+              <div><h3>Работа «под ключ»</h3><p>От диагностики до лечения. Вам нужно только прийти</p></div>
+            </div>
+            <span class="gcard__art" aria-hidden="true">🔑</span>
           </article>
         </div>
       </div>
     </section>
 
     <!-- ===================== SERVICES (marquee) ===================== -->
-    <section class="section section--tint" id="services">
+    <section class="section" id="services">
       <div class="container">
         <div class="section__head reveal" data-reveal>
-          <span class="eyebrow">Услуги</span>
-          <h2 class="section__title">Полный спектр стоматологической помощи</h2>
-          <p class="section__lead">Выберите направление — расскажем подробнее и подберём решение под вашу ситуацию.</p>
+          <span class="chip">Услуги</span>
+          <h2 class="section__title">Полный спектр помощи</h2>
+          <p class="section__lead">Выберите направление — подберём решение под вашу ситуацию.</p>
         </div>
       </div>
 
       <div class="marquee" aria-label="Список услуг">
         <div class="marquee__track">
-          <!-- track content is duplicated in JS for seamless loop -->
-          <article class="service-card">
-            <span class="service-card__icon">🦷</span>
+          <article class="service-card" style="--tint:#d9f6f3">
+            <span class="service-card__icon" aria-hidden="true">🦷</span>
             <h3>Терапия</h3>
             <p>Лечение кариеса, пульпита и реставрация зубов без боли.</p>
             <a href="#quiz" data-open-quiz class="link-arrow">Подробнее →</a>
           </article>
-          <article class="service-card">
+          <article class="service-card" style="--tint:#e3f0ff">
             <span class="badge badge--hit">ХИТ</span>
-            <span class="service-card__icon">🔩</span>
+            <span class="service-card__icon" aria-hidden="true">🔩</span>
             <h3>Имплантация</h3>
             <p>Импланты премиум-систем с пожизненной гарантией на изделие.</p>
             <a href="#quiz" data-open-quiz class="link-arrow">Подробнее →</a>
           </article>
-          <article class="service-card">
-            <span class="service-card__icon">😁</span>
+          <article class="service-card" style="--tint:#e7f9e9">
+            <span class="service-card__icon" aria-hidden="true">😁</span>
             <h3>Ортодонтия</h3>
             <p>Брекеты и элайнеры. Ровные зубы без компромиссов для эстетики.</p>
             <a href="#quiz" data-open-quiz class="link-arrow">Подробнее →</a>
           </article>
-          <article class="service-card">
-            <span class="service-card__icon">👑</span>
+          <article class="service-card" style="--tint:#fdf1e2">
+            <span class="service-card__icon" aria-hidden="true">👑</span>
             <h3>Протезирование</h3>
             <p>Коронки, виниры и мосты. Естественный вид и надёжность.</p>
             <a href="#quiz" data-open-quiz class="link-arrow">Подробнее →</a>
           </article>
-          <article class="service-card">
-            <span class="service-card__icon">🔪</span>
+          <article class="service-card" style="--tint:#f0e9ff">
+            <span class="service-card__icon" aria-hidden="true">🔪</span>
             <h3>Хирургия</h3>
             <p>Аккуратное удаление и костная пластика опытными хирургами.</p>
             <a href="#quiz" data-open-quiz class="link-arrow">Подробнее →</a>
           </article>
-          <article class="service-card">
+          <article class="service-card" style="--tint:#dff5f9">
             <span class="badge badge--hit">ХИТ</span>
-            <span class="service-card__icon">✨</span>
+            <span class="service-card__icon" aria-hidden="true">✨</span>
             <h3>Гигиена и отбеливание</h3>
             <p>Профчистка Air Flow и отбеливание до 8 тонов за визит.</p>
             <a href="#quiz" data-open-quiz class="link-arrow">Подробнее →</a>
           </article>
-          <article class="service-card">
-            <span class="service-card__icon">🧸</span>
+          <article class="service-card" style="--tint:#ffeef0">
+            <span class="service-card__icon" aria-hidden="true">🧸</span>
             <h3>Детская стоматология</h3>
             <p>Бережно и в игровой форме. Дети уходят с улыбкой, а не в слезах.</p>
             <a href="#quiz" data-open-quiz class="link-arrow">Подробнее →</a>
@@ -252,49 +270,45 @@
     <section class="section" id="paths">
       <div class="container">
         <div class="section__head reveal" data-reveal>
-          <span class="eyebrow">Варианты решений</span>
-          <h2 class="section__title">Выберите формат, который подходит именно вам</h2>
+          <span class="chip">Варианты</span>
+          <h2 class="section__title">Выберите свой формат</h2>
         </div>
         <div class="grid grid--2">
           <article class="path-card reveal" data-reveal>
-            <div class="path-card__head">
-              <span class="path-card__tag">Быстро и точечно</span>
-              <h3>Разовое лечение</h3>
-            </div>
+            <span class="chip chip--soft">Быстро и точечно</span>
+            <h3>Разовое лечение</h3>
             <p>Беспокоит конкретный зуб или нужна чистка? Решим одну задачу качественно и без навязывания лишнего.</p>
             <ul class="path-card__list">
               <li><span class="check">✓</span> Диагностика и точный план</li>
               <li><span class="check">✓</span> Фиксированная стоимость визита</li>
               <li><span class="check">✓</span> Гарантия на выполненную работу</li>
             </ul>
-            <button class="btn btn--primary btn--block" data-open-modal>Записаться на приём</button>
+            <button class="btn btn--dark btn--block" data-open-modal>Записаться на приём</button>
           </article>
 
           <article class="path-card path-card--accent reveal" data-reveal>
             <span class="badge badge--hit path-card__badge">Выгоднее</span>
-            <div class="path-card__head">
-              <span class="path-card__tag">Комплексно и в рассрочку</span>
-              <h3>Комплексный план</h3>
-            </div>
+            <span class="chip chip--soft">Комплексно и в рассрочку</span>
+            <h3>Комплексный план</h3>
             <p>Приведём полость рта в порядок «под ключ»: этапы, сроки и общая смета заранее. Доступна рассрочка 0%.</p>
             <ul class="path-card__list">
               <li><span class="check">✓</span> Индивидуальный план лечения</li>
               <li><span class="check">✓</span> Скидка до 15% на комплекс</li>
               <li><span class="check">✓</span> Рассрочка 0% до 12 месяцев</li>
             </ul>
-            <button class="btn btn--primary btn--block" data-open-quiz>Рассчитать стоимость</button>
+            <button class="btn btn--dark btn--block" data-open-quiz>Рассчитать стоимость <span class="btn__pill">⚡ 30 сек</span></button>
           </article>
         </div>
       </div>
     </section>
 
     <!-- ===================== DOCTORS ===================== -->
-    <section class="section section--tint" id="doctors">
+    <section class="section" id="doctors">
       <div class="container">
         <div class="section__head reveal" data-reveal>
-          <span class="eyebrow">Наши врачи</span>
+          <span class="chip">Наши врачи</span>
           <h2 class="section__title">Команда, которой доверяют улыбки</h2>
-          <p class="section__lead">Врачи с профильным образованием и постоянной практикой. Регулярно повышают квалификацию.</p>
+          <p class="section__lead">Врачи с профильным образованием и постоянной практикой.</p>
         </div>
         <div class="grid grid--4">
           <article class="doctor reveal" data-reveal>
@@ -329,40 +343,44 @@
     <section class="section" id="forwhom">
       <div class="container">
         <div class="section__head reveal" data-reveal>
-          <span class="eyebrow">Для кого мы</span>
-          <h2 class="section__title">Найдём подход к каждому пациенту</h2>
+          <span class="chip">Для кого</span>
+          <h2 class="section__title">Найдём подход к каждому</h2>
         </div>
         <div class="grid grid--4">
-          <article class="usecase card reveal" data-reveal>
-            <span class="card__icon">🧑‍💼</span>
-            <h3>Для взрослых</h3>
-            <p>Полный цикл лечения и профилактики для занятых людей — быстро и по записи.</p>
+          <article class="gcard gcard--mini reveal" data-reveal style="--tint:#d9f6f3">
+            <div class="gcard__caption">
+              <span class="gcard__dot" aria-hidden="true">🧑‍💼</span>
+              <div><h3>Для взрослых</h3><p>Полный цикл лечения для занятых людей — быстро и по записи</p></div>
+            </div>
           </article>
-          <article class="usecase card reveal" data-reveal>
-            <span class="card__icon">🧒</span>
-            <h3>Для детей</h3>
-            <p>Отдельный детский приём в игровой форме. Формируем любовь к стоматологу с детства.</p>
+          <article class="gcard gcard--mini reveal" data-reveal style="--tint:#fdf1e2">
+            <div class="gcard__caption">
+              <span class="gcard__dot" aria-hidden="true">🧒</span>
+              <div><h3>Для детей</h3><p>Приём в игровой форме. Любовь к стоматологу с детства</p></div>
+            </div>
           </article>
-          <article class="usecase card reveal" data-reveal>
-            <span class="card__icon">🫧</span>
-            <h3>Для тех, кто боится</h3>
-            <p>Седация и максимально бережный подход. Лечение без стресса и боли.</p>
+          <article class="gcard gcard--mini reveal" data-reveal style="--tint:#e3f0ff">
+            <div class="gcard__caption">
+              <span class="gcard__dot" aria-hidden="true">🫧</span>
+              <div><h3>Для тех, кто боится</h3><p>Седация и бережный подход. Лечение без стресса</p></div>
+            </div>
           </article>
-          <article class="usecase card reveal" data-reveal>
-            <span class="card__icon">🏢</span>
-            <h3>Корпоративные программы</h3>
-            <p>Работаем по ДМС и заключаем договоры на обслуживание сотрудников компаний.</p>
+          <article class="gcard gcard--mini reveal" data-reveal style="--tint:#f0e9ff">
+            <div class="gcard__caption">
+              <span class="gcard__dot" aria-hidden="true">🏢</span>
+              <div><h3>Корпоративные (ДМС)</h3><p>Договоры на обслуживание сотрудников компаний</p></div>
+            </div>
           </article>
         </div>
       </div>
     </section>
 
     <!-- ===================== REVIEWS ===================== -->
-    <section class="section section--tint" id="reviews">
+    <section class="section" id="reviews">
       <div class="container">
         <div class="section__head reveal" data-reveal>
-          <span class="eyebrow">Отзывы</span>
-          <h2 class="section__title">Что говорят наши пациенты</h2>
+          <span class="chip">Отзывы</span>
+          <h2 class="section__title">Что говорят пациенты</h2>
         </div>
         <div class="grid grid--3">
           <article class="review reveal" data-reveal>
@@ -397,44 +415,44 @@
     <section class="section" id="process">
       <div class="container">
         <div class="section__head reveal" data-reveal>
-          <span class="eyebrow">Как мы работаем</span>
-          <h2 class="section__title">Понятный путь от заявки до здоровой улыбки</h2>
+          <span class="chip">Этапы</span>
+          <h2 class="section__title">Путь к здоровой улыбке</h2>
         </div>
         <div class="steps">
           <article class="step reveal" data-reveal>
             <span class="step__num">1</span>
             <h3>Заявка и запись</h3>
-            <p>Оставляете заявку — перезваниваем в течение 15 минут и подбираем удобное время.</p>
-            <span class="step__time">≈ 15 минут</span>
+            <p>Оставляете заявку — перезваниваем и подбираем удобное время.</p>
+            <span class="chip chip--soft">≈ 15 минут</span>
           </article>
           <article class="step reveal" data-reveal>
             <span class="step__num">2</span>
             <h3>Диагностика и план</h3>
-            <p>Осмотр, снимок и прозрачный план лечения с этапами, сроками и финальной сметой.</p>
-            <span class="step__time">1 визит</span>
+            <p>Осмотр, снимок и прозрачный план лечения с финальной сметой.</p>
+            <span class="chip chip--soft">1 визит</span>
           </article>
           <article class="step reveal" data-reveal>
             <span class="step__num">3</span>
             <h3>Лечение</h3>
-            <p>Комфортное лечение по согласованному плану. Держим вас в курсе на каждом этапе.</p>
-            <span class="step__time">по плану</span>
+            <p>Комфортное лечение по согласованному плану, без сюрпризов.</p>
+            <span class="chip chip--soft">по плану</span>
           </article>
           <article class="step reveal" data-reveal>
             <span class="step__num">4</span>
-            <h3>Гарантийное сопровождение</h3>
-            <p>Плановые осмотры и гарантия на работы. Остаёмся на связи и после лечения.</p>
-            <span class="step__time">постоянно</span>
+            <h3>Сопровождение</h3>
+            <p>Плановые осмотры и гарантия. Остаёмся на связи после лечения.</p>
+            <span class="chip chip--soft">постоянно</span>
           </article>
         </div>
       </div>
     </section>
 
     <!-- ===================== PRICING ===================== -->
-    <section class="section section--tint" id="pricing">
+    <section class="section" id="pricing">
       <div class="container">
         <div class="section__head reveal" data-reveal>
-          <span class="eyebrow">Цены</span>
-          <h2 class="section__title">Честные цены на популярные услуги</h2>
+          <span class="chip">Цены</span>
+          <h2 class="section__title">Честные цены</h2>
           <p class="section__lead">Указаны цены «от». Точную стоимость назовём после осмотра — без сюрпризов.</p>
         </div>
         <div class="pricing reveal" data-reveal>
@@ -454,7 +472,7 @@
           </table>
           <div class="pricing__cta">
             <p>Нужна точная смета под вашу ситуацию?</p>
-            <button class="btn btn--primary btn--lg" data-open-quiz>Рассчитать стоимость лечения</button>
+            <button class="btn btn--dark btn--xl" data-open-quiz>Рассчитать стоимость <span class="btn__pill">⚡ 30 сек</span></button>
           </div>
         </div>
       </div>
@@ -464,8 +482,8 @@
     <section class="section" id="faq">
       <div class="container container--narrow">
         <div class="section__head reveal" data-reveal>
-          <span class="eyebrow">Вопросы и ответы</span>
-          <h2 class="section__title">Отвечаем на частые вопросы</h2>
+          <span class="chip">FAQ</span>
+          <h2 class="section__title">Частые вопросы</h2>
         </div>
         <div class="faq">
           <div class="faq__item reveal" data-reveal>
@@ -503,17 +521,16 @@
     </section>
 
     <!-- ===================== QUIZ / CALCULATOR ===================== -->
-    <section class="section section--cta" id="quiz">
+    <section class="section" id="quiz">
       <div class="container container--narrow">
         <div class="section__head reveal" data-reveal>
-          <span class="eyebrow">Калькулятор</span>
-          <h2 class="section__title">Рассчитайте стоимость лечения за 30 секунд</h2>
-          <p class="section__lead">Ответьте на 3 вопроса — и мы свяжемся с предварительным расчётом и удобным временем визита.</p>
+          <span class="chip">Калькулятор</span>
+          <h2 class="section__title">Стоимость лечения за 30 секунд</h2>
+          <p class="section__lead">Ответьте на 3 вопроса — свяжемся с предварительным расчётом.</p>
         </div>
         <div class="quiz reveal" data-reveal id="quizWidget">
           <div class="quiz__progress"><span class="quiz__progress-bar" id="quizBar"></span></div>
           <form class="quiz__form" id="quizForm" novalidate>
-            <!-- steps injected/handled by JS -->
             <div class="quiz__viewport">
               <!-- Step 1 -->
               <fieldset class="quiz__step is-active" data-step="1">
@@ -568,15 +585,15 @@
                 <div class="quiz__success-icon" aria-hidden="true">✓</div>
                 <h3>Заявка отправлена!</h3>
                 <p>Спасибо! Мы свяжемся с вами в течение 15 минут в рабочее время и назовём предварительную стоимость.</p>
-                <button type="button" class="btn btn--ghost" data-quiz-restart>Отправить ещё одну заявку</button>
+                <button type="button" class="btn btn--white" data-quiz-restart>Отправить ещё одну заявку</button>
               </div>
             </div>
 
             <div class="quiz__nav" id="quizNav">
-              <button type="button" class="btn btn--ghost" id="quizBack" hidden>← Назад</button>
+              <button type="button" class="btn btn--white" id="quizBack" hidden>← Назад</button>
               <span class="quiz__counter" id="quizCounter">Шаг 1 из 3</span>
-              <button type="button" class="btn btn--primary" id="quizNext">Далее →</button>
-              <button type="submit" class="btn btn--primary" id="quizSubmit" hidden>Отправить заявку</button>
+              <button type="button" class="btn btn--dark" id="quizNext">Далее →</button>
+              <button type="submit" class="btn btn--dark" id="quizSubmit" hidden>Отправить заявку</button>
             </div>
           </form>
         </div>
@@ -586,40 +603,40 @@
 
   <!-- ===================== FOOTER ===================== -->
   <footer class="footer" id="footer">
-    <div class="container footer__inner">
-      <div class="footer__col footer__brand">
-        <a href="#hero" class="logo logo--light">
-          <span class="logo__icon" aria-hidden="true">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 3C9 3 8 4.5 6 4.5S3 3.5 3 6c0 3 1 5 1.8 8.2C5.4 16.6 6 21 7.5 21c1.2 0 1.3-2.5 1.9-4.2.4-1.1.9-1.8 2.6-1.8s2.2.7 2.6 1.8c.6 1.7.7 4.2 1.9 4.2 1.5 0 2.1-4.4 2.7-6.8C21 11 22 9 22 6c0-2.5-1-1.5-3-1.5S15 3 12 3Z" fill="currentColor"/></svg>
-          </span>
-          <span class="logo__text">Дента<span>Люкс</span></span>
-        </a>
-        <p>Современная стоматология с заботой о каждой улыбке. Лечим бережно, честно и с гарантией.</p>
+    <div class="footer__box">
+      <div class="footer__inner">
+        <div class="footer__col footer__brand">
+          <a href="#hero" class="logo logo--light">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3C9 3 8 4.5 6 4.5S3 3.5 3 6c0 3 1 5 1.8 8.2C5.4 16.6 6 21 7.5 21c1.2 0 1.3-2.5 1.9-4.2.4-1.1.9-1.8 2.6-1.8s2.2.7 2.6 1.8c.6 1.7.7 4.2 1.9 4.2 1.5 0 2.1-4.4 2.7-6.8C21 11 22 9 22 6c0-2.5-1-1.5-3-1.5S15 3 12 3Z" fill="currentColor"/></svg>
+            <span class="logo__text">Дента<em>Люкс</em></span>
+          </a>
+          <p>Современная стоматология с заботой о каждой улыбке. Лечим бережно, честно и с гарантией.</p>
+        </div>
+        <div class="footer__col">
+          <h4>Контакты</h4>
+          <a href="tel:+74950000000">+7 (495) 000-00-00</a>
+          <a href="mailto:hello@dentalux.example">hello@dentalux.example</a>
+          <p>Москва, ул. Примерная, д. 12</p>
+          <p>Ежедневно 09:00–21:00</p>
+        </div>
+        <div class="footer__col">
+          <h4>Мессенджеры</h4>
+          <a href="#" aria-label="Telegram">✈️ Telegram</a>
+          <a href="#" aria-label="WhatsApp">💬 WhatsApp</a>
+          <a href="#" aria-label="ВКонтакте">🔵 ВКонтакте</a>
+        </div>
+        <div class="footer__col">
+          <h4>Компания</h4>
+          <a href="#services">Услуги</a>
+          <a href="#pricing">Цены</a>
+          <a href="#privacy" data-open-privacy>Политика конфиденциальности</a>
+          <button class="btn btn--accent" data-open-modal>Записаться</button>
+        </div>
       </div>
-      <div class="footer__col">
-        <h4>Контакты</h4>
-        <a href="tel:+74950000000">+7 (495) 000-00-00</a>
-        <a href="mailto:hello@dentalux.example">hello@dentalux.example</a>
-        <p>Москва, ул. Примерная, д. 12</p>
-        <p>Ежедневно 09:00–21:00</p>
+      <div class="footer__bottom">
+        <p>© 2026 ДентаЛюкс. ООО «ДентаЛюкс», ИНН 0000000000. Все права защищены.</p>
+        <p class="footer__disclaimer">Имеются противопоказания. Необходима консультация специалиста.</p>
       </div>
-      <div class="footer__col">
-        <h4>Мессенджеры</h4>
-        <a href="#" aria-label="Telegram">✈️ Telegram</a>
-        <a href="#" aria-label="WhatsApp">💬 WhatsApp</a>
-        <a href="#" aria-label="ВКонтакте">🔵 ВКонтакте</a>
-      </div>
-      <div class="footer__col">
-        <h4>Компания</h4>
-        <a href="#services">Услуги</a>
-        <a href="#pricing">Цены</a>
-        <a href="#privacy" data-open-privacy>Политика конфиденциальности</a>
-        <button class="btn btn--primary" data-open-modal>Записаться</button>
-      </div>
-    </div>
-    <div class="container footer__bottom">
-      <p>© 2026 ДентаЛюкс. ООО «ДентаЛюкс», ИНН 0000000000. Все права защищены.</p>
-      <p class="footer__disclaimer">Имеются противопоказания. Необходима консультация специалиста.</p>
     </div>
   </footer>
 
@@ -644,7 +661,7 @@
           <span>Согласен(-на) на обработку персональных данных согласно <a href="#privacy" data-open-privacy>политике конфиденциальности</a>.</span>
         </label>
         <p class="quiz__error" data-error></p>
-        <button type="submit" class="btn btn--primary btn--block btn--lg">Отправить заявку</button>
+        <button type="submit" class="btn btn--dark btn--block btn--xl">Отправить заявку</button>
       </form>
       <div class="modal__success" hidden>
         <div class="quiz__success-icon" aria-hidden="true">✓</div>
@@ -673,14 +690,12 @@
     <p>Мы используем файлы cookie, чтобы сайт работал лучше. Продолжая пользоваться сайтом, вы соглашаетесь на обработку данных.</p>
     <div class="cookie__actions">
       <a href="#privacy" data-open-privacy class="cookie__link">Подробнее</a>
-      <button class="btn btn--primary" id="cookieAccept">Принять</button>
+      <button class="btn btn--dark" id="cookieAccept">Принять</button>
     </div>
   </div>
 
-  <!-- floating quick-call button -->
-  <a href="tel:+74950000000" class="fab" aria-label="Позвонить в клинику">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.3 1.1L6.6 10.8Z" fill="currentColor"/></svg>
-  </a>
+  <!-- floating chat button (as on reference) -->
+  <button class="fab" data-open-modal aria-label="Открыть форму записи">💬</button>
 
   <script src="script.js"></script>
 </body>
