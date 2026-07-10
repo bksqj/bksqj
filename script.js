@@ -50,6 +50,14 @@
      Scroll reveal (Intersection Observer)
      ============================================================ */
   var revealEls = $$('[data-reveal]');
+  /* stagger siblings: each next revealed card in a group waits a bit longer */
+  revealEls.forEach(function (el) {
+    var parent = el.parentElement;
+    if (!parent) return;
+    var sibs = Array.prototype.filter.call(parent.children, function (c) { return c.hasAttribute('data-reveal'); });
+    var idx = sibs.indexOf(el);
+    if (idx > 0) el.style.transitionDelay = Math.min(idx * 80, 400) + 'ms';
+  });
   if ('IntersectionObserver' in window) {
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
@@ -108,6 +116,81 @@
   if (track) {
     track.innerHTML += track.innerHTML;
   }
+
+  /* ============================================================
+     Scroll-driven tilted carousel (advantages) — the track slides
+     horizontally as the page scrolls, with a smooth lerp follow
+     ============================================================ */
+  $$('[data-carousel]').forEach(function (wrap) {
+    var ctrack = $('.carousel__track', wrap);
+    if (!ctrack) return;
+    var target = 0, current = 0, raf = null;
+
+    var measure = function () {
+      var rect = wrap.getBoundingClientRect();
+      var vh = window.innerHeight;
+      var p = (vh - rect.top) / (vh + rect.height);
+      p = Math.max(0, Math.min(1, p));
+      var dist = ctrack.scrollWidth - wrap.clientWidth;
+      target = dist > 0 ? -dist * p : 0;
+      if (!raf) raf = requestAnimationFrame(step);
+    };
+    var step = function () {
+      current += (target - current) * 0.1;
+      ctrack.style.transform = 'translate3d(' + current + 'px, 0, 0)';
+      if (Math.abs(target - current) > 0.5) raf = requestAnimationFrame(step);
+      else { current = target; raf = null; }
+    };
+    window.addEventListener('scroll', measure, { passive: true });
+    window.addEventListener('resize', measure);
+    measure();
+  });
+
+  /* ============================================================
+     Configurator — toggle option chips, collapse panels, count
+     ============================================================ */
+  (function initConfig() {
+    var opts = $$('.config__opt');
+    if (!opts.length) return;
+    var countEl = $('#configCount');
+    var updateCount = function () {
+      if (countEl) countEl.textContent = $$('.config__opt.is-on').length;
+    };
+    opts.forEach(function (btn) {
+      btn.setAttribute('aria-pressed', String(btn.classList.contains('is-on')));
+      btn.addEventListener('click', function () {
+        btn.classList.toggle('is-on');
+        btn.setAttribute('aria-pressed', String(btn.classList.contains('is-on')));
+        updateCount();
+      });
+    });
+    $$('.config__plus').forEach(function (plus) {
+      plus.addEventListener('click', function () {
+        var panel = plus.closest('.config__panel');
+        var closed = panel.classList.toggle('is-closed');
+        plus.setAttribute('aria-expanded', String(!closed));
+      });
+    });
+    updateCount();
+  })();
+
+  /* ============================================================
+     Hero mouse parallax (fine pointers only)
+     ============================================================ */
+  (function initParallax() {
+    var media = $('.hero__media');
+    var scene = $('.hero__scene');
+    if (!media || !scene || !window.matchMedia('(pointer: fine)').matches) return;
+    media.addEventListener('mousemove', function (e) {
+      var r = media.getBoundingClientRect();
+      var x = (e.clientX - r.left) / r.width - 0.5;
+      var y = (e.clientY - r.top) / r.height - 0.5;
+      scene.style.transform = 'translate(' + (-x * 26) + 'px, ' + (-y * 18) + 'px)';
+    });
+    media.addEventListener('mouseleave', function () {
+      scene.style.transform = '';
+    });
+  })();
 
   /* ============================================================
      FAQ accordion

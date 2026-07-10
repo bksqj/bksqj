@@ -152,50 +152,52 @@
       </div>
     </section>
 
-    <!-- ===================== WHY US ===================== -->
+    <!-- ===================== WHY US (scroll-driven tilted carousel) ===================== -->
     <section class="section" id="why">
       <div class="container">
         <div class="section__head reveal" data-reveal>
           <span class="chip">Преимущества</span>
           <h2 class="section__title">Почему выбирают нас</h2>
         </div>
-        <div class="grid grid--3">
-          <article class="gcard reveal" data-reveal style="--tint:#d9f6f3">
+      </div>
+      <div class="carousel reveal" data-reveal data-carousel>
+        <div class="carousel__track">
+          <article class="gcard gcard--tilt" style="--tint:#d9f6f3">
             <div class="gcard__caption">
               <span class="gcard__dot" aria-hidden="true">⚡</span>
               <div><h3>Быстрая запись</h3><p>Свободные посты день в день. Никаких недель ожидания</p></div>
             </div>
             <span class="gcard__art" aria-hidden="true">⚡</span>
           </article>
-          <article class="gcard reveal" data-reveal style="--tint:#e3f0ff">
+          <article class="gcard gcard--tilt" style="--tint:#e3f0ff">
             <div class="gcard__caption">
               <span class="gcard__dot" aria-hidden="true">🛡️</span>
               <div><h3>Гарантия</h3><p>Официальная гарантия на работы и запчасти, всё в заказ-наряде</p></div>
             </div>
             <span class="gcard__art" aria-hidden="true">🛡️</span>
           </article>
-          <article class="gcard reveal" data-reveal style="--tint:#e7f9e9">
+          <article class="gcard gcard--tilt" style="--tint:#e7f9e9">
             <div class="gcard__caption">
               <span class="gcard__dot" aria-hidden="true">🔍</span>
               <div><h3>Честная диагностика</h3><p>Показываем и объясняем каждую неисправность — до начала работ</p></div>
             </div>
             <span class="gcard__art" aria-hidden="true">🔍</span>
           </article>
-          <article class="gcard reveal" data-reveal style="--tint:#fdf1e2">
+          <article class="gcard gcard--tilt" style="--tint:#fdf1e2">
             <div class="gcard__caption">
               <span class="gcard__dot" aria-hidden="true">☕</span>
               <div><h3>Комфортное ожидание</h3><p>Зона отдыха с кофе и Wi-Fi. Или оставьте авто — сообщим, когда готово</p></div>
             </div>
             <span class="gcard__art" aria-hidden="true">☕</span>
           </article>
-          <article class="gcard reveal" data-reveal style="--tint:#f0e9ff">
+          <article class="gcard gcard--tilt" style="--tint:#f0e9ff">
             <div class="gcard__caption">
               <span class="gcard__dot" aria-hidden="true">💳</span>
               <div><h3>Прозрачные цены</h3><p>Смета до начала работ. Никаких «внезапных» доплат при выдаче</p></div>
             </div>
             <span class="gcard__art" aria-hidden="true">💳</span>
           </article>
-          <article class="gcard reveal" data-reveal style="--tint:#dff5f9">
+          <article class="gcard gcard--tilt" style="--tint:#dff5f9">
             <div class="gcard__caption">
               <span class="gcard__dot" aria-hidden="true">🔑</span>
               <div><h3>Работа «под ключ»</h3><p>От диагностики до выдачи. Запчасти подберём и привезём сами</p></div>
@@ -262,6 +264,67 @@
             <p>Проводка, стартеры, генераторы, сигнализации и мультимедиа.</p>
             <a href="#quiz" data-open-quiz class="link-arrow">Подробнее →</a>
           </article>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="banner reveal" data-reveal>
+          <span class="banner__num">200+</span>
+          <p>видов работ — от замены масла до капитального ремонта двигателя</p>
+          <button class="btn btn--white btn--xl" data-open-quiz>Рассчитать стоимость <span class="btn__pill">⚡ 30 сек</span></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONFIGURATOR ===================== -->
+    <section class="section" id="config">
+      <div class="container">
+        <div class="section__head reveal" data-reveal>
+          <span class="chip">Конструктор</span>
+          <h2 class="section__title">Соберите свой визит в сервис</h2>
+          <p class="section__lead">Отметьте, что важно именно вам, — учтём это при записи и расчёте стоимости.</p>
+        </div>
+        <div class="config reveal" data-reveal>
+          <span class="config__float" aria-hidden="true" style="top:-34px;right:5%">⚙️</span>
+          <span class="config__float" aria-hidden="true" style="top:42%;left:-20px">🔧</span>
+          <span class="config__float" aria-hidden="true" style="bottom:16%;right:-16px">🛞</span>
+          <div class="config__panel">
+            <div class="config__head"><h3>Тип работ</h3><button type="button" class="config__plus" aria-expanded="true" aria-label="Свернуть или развернуть список опций">+</button></div>
+            <div class="config__chips">
+              <button type="button" class="config__opt is-on">Техобслуживание</button>
+              <button type="button" class="config__opt">Диагностика</button>
+              <button type="button" class="config__opt">Ремонт узла</button>
+            </div>
+          </div>
+          <div class="config__panel">
+            <div class="config__head"><h3>Запчасти</h3><button type="button" class="config__plus" aria-expanded="true" aria-label="Свернуть или развернуть список опций">+</button></div>
+            <div class="config__chips">
+              <button type="button" class="config__opt is-on">Оригинал</button>
+              <button type="button" class="config__opt">Качественный аналог</button>
+              <button type="button" class="config__opt">Привезу свои</button>
+            </div>
+          </div>
+          <div class="config__panel">
+            <div class="config__head"><h3>Пока ждёте</h3><button type="button" class="config__plus" aria-expanded="true" aria-label="Свернуть или развернуть список опций">+</button></div>
+            <div class="config__chips">
+              <button type="button" class="config__opt is-on">Зона отдыха с кофе</button>
+              <button type="button" class="config__opt">Подменный автомобиль</button>
+              <button type="button" class="config__opt">Уеду по делам</button>
+            </div>
+          </div>
+          <div class="config__panel">
+            <div class="config__head"><h3>Дополнительно</h3><button type="button" class="config__plus" aria-expanded="true" aria-label="Свернуть или развернуть список опций">+</button></div>
+            <div class="config__chips">
+              <button type="button" class="config__opt">Мойка после ремонта</button>
+              <button type="button" class="config__opt">Хранение шин</button>
+              <button type="button" class="config__opt">Полировка кузова</button>
+              <button type="button" class="config__opt">Антикор</button>
+            </div>
+          </div>
+          <div class="config__bar">
+            <p>Выбрано опций: <b id="configCount">0</b></p>
+            <button class="btn btn--accent" data-open-quiz>Рассчитать стоимость <span class="btn__pill">⚡ 30 сек</span></button>
+          </div>
         </div>
       </div>
     </section>
@@ -339,36 +402,44 @@
       </div>
     </section>
 
-    <!-- ===================== FOR WHOM ===================== -->
+    <!-- ===================== FOR WHOM (photo masonry) ===================== -->
     <section class="section" id="forwhom">
       <div class="container">
         <div class="section__head reveal" data-reveal>
           <span class="chip">Для кого</span>
           <h2 class="section__title">Найдём подход к каждому авто</h2>
         </div>
-        <div class="grid grid--4">
-          <article class="gcard gcard--mini reveal" data-reveal style="--tint:#d9f6f3">
-            <div class="gcard__caption">
-              <span class="gcard__dot" aria-hidden="true">🚙</span>
-              <div><h3>Легковые авто</h3><p>Все марки и годы выпуска — от «бюджетников» до премиума</p></div>
+        <div class="masonry">
+          <article class="pcard reveal" data-reveal style="--pbg:linear-gradient(160deg,#cfeeeb,#79d4cb)">
+            <span class="pcard__bg" aria-hidden="true">🚙</span>
+            <div class="pcard__cap">
+              <span class="pcard__cap-icon" aria-hidden="true">🚙</span>
+              <h3>Легковые авто</h3>
+              <p>Все марки и годы выпуска — от «бюджетников» до премиума.</p>
             </div>
           </article>
-          <article class="gcard gcard--mini reveal" data-reveal style="--tint:#fdf1e2">
-            <div class="gcard__caption">
-              <span class="gcard__dot" aria-hidden="true">🚐</span>
-              <div><h3>Коммерческий транспорт</h3><p>Фургоны и микроавтобусы. Минимальный простой</p></div>
+          <article class="pcard reveal" data-reveal style="--pbg:linear-gradient(160deg,#ffe9d2,#ffc38a)">
+            <span class="pcard__bg" aria-hidden="true">🚐</span>
+            <div class="pcard__cap">
+              <span class="pcard__cap-icon" aria-hidden="true">🚐</span>
+              <h3>Коммерческий транспорт</h3>
+              <p>Фургоны и микроавтобусы. Минимальный простой для вашего бизнеса.</p>
             </div>
           </article>
-          <article class="gcard gcard--mini reveal" data-reveal style="--tint:#e3f0ff">
-            <div class="gcard__caption">
-              <span class="gcard__dot" aria-hidden="true">🔰</span>
-              <div><h3>Для новичков</h3><p>Объясняем простыми словами, что и зачем делаем</p></div>
+          <article class="pcard reveal" data-reveal style="--pbg:linear-gradient(160deg,#d9e9ff,#94c2f7)">
+            <span class="pcard__bg" aria-hidden="true">🔰</span>
+            <div class="pcard__cap">
+              <span class="pcard__cap-icon" aria-hidden="true">🔰</span>
+              <h3>Для новичков</h3>
+              <p>Объясняем простыми словами, что и зачем делаем. Без «развода» на ремонт.</p>
             </div>
           </article>
-          <article class="gcard gcard--mini reveal" data-reveal style="--tint:#f0e9ff">
-            <div class="gcard__caption">
-              <span class="gcard__dot" aria-hidden="true">🏢</span>
-              <div><h3>Автопарки компаний</h3><p>Договоры на обслуживание корпоративных автопарков</p></div>
+          <article class="pcard reveal" data-reveal style="--pbg:linear-gradient(160deg,#e9e2ff,#bda7f2)">
+            <span class="pcard__bg" aria-hidden="true">🏢</span>
+            <div class="pcard__cap">
+              <span class="pcard__cap-icon" aria-hidden="true">🏢</span>
+              <h3>Автопарки компаний</h3>
+              <p>Договоры на обслуживание корпоративных автопарков с приоритетной записью.</p>
             </div>
           </article>
         </div>

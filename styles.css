@@ -157,7 +157,7 @@ fieldset { min-inline-size: auto; }
   min-height: clamp(340px, 52vw, 560px);
   box-shadow: var(--shadow);
 }
-.hero__scene { position: absolute; inset: 0; display: grid; place-items: center; }
+.hero__scene { position: absolute; inset: 0; display: grid; place-items: center; transition: transform 0.25s ease-out; }
 .hero__tooth {
   font-size: clamp(130px, 24vw, 280px); line-height: 1;
   filter: drop-shadow(0 30px 40px rgba(23,169,158,0.4));
@@ -240,8 +240,94 @@ fieldset { min-inline-size: auto; }
   transition: transform 0.35s var(--ease);
 }
 .gcard:hover .gcard__art { transform: scale(1.15) rotate(-6deg); }
-.gcard--mini { min-height: auto; }
-.gcard--mini .gcard__caption { min-height: 128px; }
+/* ===================== TILTED SCROLL CAROUSEL (why us) ===================== */
+.carousel { overflow: hidden; padding: 26px 0 36px; }
+.carousel__track { display: flex; gap: 22px; padding: 0 max(24px, calc((100vw - var(--container)) / 2)); width: max-content; will-change: transform; }
+.gcard--tilt { flex: none; width: min(400px, 80vw); min-height: 430px; }
+.carousel .gcard--tilt:nth-child(odd) { transform: rotate(-4deg) translateY(12px); }
+.carousel .gcard--tilt:nth-child(even) { transform: rotate(3deg) translateY(-8px); }
+.carousel .gcard--tilt:hover { transform: rotate(0deg) scale(1.04); box-shadow: var(--shadow-lg); z-index: 2; }
+.carousel .gcard--tilt .gcard__art { font-size: 110px; }
+
+/* ===================== DARK CTA BANNER ===================== */
+.banner {
+  margin-top: 36px; background: var(--ink); color: #fff; border-radius: var(--r-xl);
+  padding: 30px 36px; display: flex; flex-wrap: wrap; align-items: center; gap: 26px;
+}
+.banner__num {
+  flex: none; width: 88px; height: 88px; border-radius: 50%;
+  background: rgba(255,255,255,0.12); display: grid; place-items: center;
+  font-size: 25px; font-weight: 800; letter-spacing: -0.02em;
+}
+.banner p { flex: 1; min-width: 240px; font-size: 20px; font-weight: 600; letter-spacing: -0.02em; line-height: 1.35; }
+
+/* ===================== CONFIGURATOR (interactive chips) ===================== */
+.config { position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.config__float {
+  position: absolute; z-index: 0; font-size: 64px; pointer-events: none;
+  filter: drop-shadow(0 16px 20px rgba(20,22,22,0.22)) saturate(1.2);
+  animation: floaty 6s ease-in-out infinite;
+}
+.config__panel {
+  position: relative; z-index: 1;
+  background: rgba(150, 154, 154, 0.30);
+  backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+  border-radius: var(--r-lg); padding: 24px;
+}
+.config__head { display: flex; align-items: center; justify-content: space-between; gap: 14px; margin-bottom: 16px; }
+.config__head h3 { font-size: 20px; letter-spacing: -0.02em; }
+.config__plus {
+  flex: none; width: 42px; height: 42px; border-radius: 50%; background: #fff;
+  font-size: 24px; line-height: 1; font-weight: 500;
+  transition: transform 0.3s var(--ease);
+}
+.config__panel.is-closed .config__plus { transform: rotate(45deg); }
+.config__panel.is-closed .config__chips { display: none; }
+.config__chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.config__opt {
+  background: #fff; padding: 11px 18px; border-radius: var(--r-pill);
+  font-size: 14px; font-weight: 600;
+  transition: background 0.2s, color 0.2s, transform 0.15s var(--ease);
+}
+.config__opt:hover { transform: translateY(-2px); }
+.config__opt.is-on { background: var(--accent); color: var(--accent-ink); }
+.config__bar {
+  grid-column: 1 / -1; position: relative; z-index: 1;
+  background: var(--ink); color: #fff; border-radius: var(--r-lg);
+  padding: 22px 28px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 18px;
+}
+.config__bar p { font-size: 17px; font-weight: 600; }
+.config__bar b { color: var(--accent-bright); font-variant-numeric: tabular-nums; }
+
+/* ===================== PHOTO MASONRY (for whom) ===================== */
+.masonry { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.pcard {
+  position: relative; border-radius: var(--r-xl); overflow: hidden;
+  min-height: 430px; display: flex; align-items: flex-end; padding: 16px;
+  background: var(--pbg, linear-gradient(160deg, #cfeeeb, #8fd9d1));
+}
+.masonry .pcard:nth-child(even) { margin-top: 46px; }
+.masonry .pcard:nth-child(n+3) { margin-top: -30px; }
+.masonry .pcard:nth-child(4) { margin-top: 16px; }
+.pcard__bg {
+  position: absolute; inset: 0; display: grid; place-items: center;
+  font-size: 170px; line-height: 1; opacity: 0.9;
+  filter: drop-shadow(0 24px 30px rgba(20,22,22,0.25)) saturate(1.15);
+  transition: transform 0.5s var(--ease);
+}
+.pcard:hover .pcard__bg { transform: scale(1.1) rotate(-5deg); }
+.pcard__cap {
+  position: relative; width: min(430px, 100%);
+  background: rgba(20, 22, 22, 0.45);
+  backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+  border-radius: var(--r-md); padding: 22px; color: #fff;
+}
+.pcard__cap-icon {
+  display: grid; place-items: center; width: 46px; height: 46px; border-radius: 50%;
+  background: #fff; font-size: 20px; margin-bottom: 14px;
+}
+.pcard__cap h3 { color: #fff; font-size: 22px; letter-spacing: -0.02em; margin-bottom: 8px; }
+.pcard__cap p { color: rgba(255,255,255,0.82); font-size: 15px; line-height: 1.5; }
 
 /* ===================== SERVICES MARQUEE ===================== */
 .marquee { overflow: hidden; padding: 8px 0; -webkit-mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent); mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent); }
@@ -504,6 +590,12 @@ fieldset { min-inline-size: auto; }
   .quiz__form { padding: 28px 20px; }
   .header__actions .icon-btn:nth-child(2), .header__actions .icon-btn:nth-child(3) { display: none; }
   .gcard { min-height: 280px; }
+  .config { grid-template-columns: 1fr; }
+  .config__float { display: none; }
+  .masonry { grid-template-columns: 1fr; }
+  .masonry .pcard { margin-top: 0 !important; min-height: 360px; }
+  .banner { padding: 26px; }
+  .banner .btn--xl { width: 100%; }
 }
 @media (max-width: 480px) {
   .container { padding: 0 14px; }
