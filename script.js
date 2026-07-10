@@ -15,6 +15,10 @@
   var $ = function (s, ctx) { return (ctx || document).querySelector(s); };
   var $$ = function (s, ctx) { return Array.prototype.slice.call((ctx || document).querySelectorAll(s)); };
 
+  /* Brand name is taken from <body data-brand="..."> so the same script
+     serves multiple landings (dental, auto, ...). */
+  var BRAND = document.body.getAttribute('data-brand') || 'ДентаЛюкс';
+
   /* ============================================================
      Sticky header state
      ============================================================ */
@@ -164,7 +168,7 @@
      Lead submission (Telegram Bot API or demo mode)
      ============================================================ */
   function sendLead(data) {
-    var text = '🦷 <b>Новая заявка — ДентаЛюкс</b>\n\n' +
+    var text = '📩 <b>Новая заявка — ' + BRAND + '</b>\n\n' +
       Object.keys(data).map(function (k) { return '<b>' + k + ':</b> ' + data[k]; }).join('\n');
 
     if (TELEGRAM.botToken && TELEGRAM.chatId) {
@@ -175,7 +179,7 @@
       }).then(function (r) { return r.json(); });
     }
     /* Demo mode */
-    console.log('[ДентаЛюкс] Заявка (демо-режим):', data);
+    console.log('[' + BRAND + '] Заявка (демо-режим):', data);
     return Promise.resolve({ ok: true, demo: true });
   }
 
@@ -362,7 +366,7 @@
     var cookie = $('#cookie');
     var accept = $('#cookieAccept');
     if (!cookie) return;
-    var KEY = 'dentalux_cookie_ok';
+    var KEY = 'cookie_ok_' + BRAND;
     var stored;
     try { stored = localStorage.getItem(KEY); } catch (e) { stored = null; }
     if (!stored) {
