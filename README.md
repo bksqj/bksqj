@@ -82,8 +82,8 @@
 ## 📊 Статистика GitHub
 
 <p align="center">
-  <img height="165" src="https://github-readme-stats.vercel.app/api?username=bksqj&show_icons=true&hide_border=true&count_private=true&include_all_commits=true&title_color=1F6FEB&icon_color=1F883D" alt="stats" />
-  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=bksqj&layout=compact&hide_border=true&langs_count=8&title_color=1F6FEB" alt="top langs" />
+  <img height="165" src="https://grs.rickstaa.dev/api?username=bksqj&show_icons=true&hide_border=true&count_private=true&include_all_commits=true&title_color=1F6FEB&icon_color=1F883D" alt="stats" />
+  <img height="165" src="https://grs.rickstaa.dev/api/top-langs/?username=bksqj&layout=compact&hide_border=true&langs_count=8&title_color=1F6FEB" alt="top langs" />
 </p>
 
 ---
