@@ -1,11 +1,10 @@
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:1F6FEB,100:1F883D&height=200&section=header&text=Лев%20Едрёнкин&fontSize=44&fontColor=ffffff&desc=Бизнес-аналитик%20•%20Специалист%20по%20автоматизации%20бизнес-процессов&descSize=17&descAlignY=64" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:1F6FEB,100:1F883D&height=200&section=header&text=bksqj&fontSize=54&fontColor=ffffff&desc=Python%20•%20Telegram-боты%20•%20Автоматизация%20с%20ИИ&descSize=17&descAlignY=64" width="100%" />
 
 <p align="center">
-  <a href="https://readme-typing-svg.demolab.com"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1000&color=1F6FEB&center=true&width=620&lines=Автоматизирую+рутину+и+процессы;Django+%E2%80%A2+Python+%E2%80%A2+Telegram-боты;Работаю+с+данными+и+требованиями;Учусь+и+расту+каждый+день" alt="typing" /></a>
+  <a href="https://readme-typing-svg.demolab.com"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1000&color=1F6FEB&center=true&width=620&lines=Строю+Telegram-ботов+и+автоматизации;Django+%E2%80%A2+FastAPI+%E2%80%A2+Python;Делаю+лендинги+и+мини-CRM+для+бизнеса;Использую+Claude+Code+как+ускоритель+разработки" alt="typing" /></a>
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/📍_Уфа-1F6FEB?style=flat-square" />
   <img src="https://img.shields.io/badge/Открыт_к_работе-1F883D?style=flat-square" />
   <img src="https://komarev.com/ghpvc/?username=bksqj&style=flat-square&color=1F6FEB&label=Просмотров+профиля" />
 </p>
@@ -14,17 +13,14 @@
 
 ## 👋 Обо мне
 
-Специалист технической поддержки, который любит **убирать рутину автоматизацией**.
-Работаю в **Jira Service Desk**, веду базу знаний — и параллельно самостоятельно
-делаю прикладные проекты: веб-платформы, Telegram-ботов, инструменты для сбора и
-анализа данных, настольные приложения и ИИ-агентов.
+Разработчик-самоучка, который любит **превращать идею в рабочий продукт**:
+Telegram-боты, лендинги, инструменты для сбора и анализа данных, ИИ-агенты.
 
-- 🎯 Ищу первую работу в роли **бизнес-аналитика / специалиста по автоматизации**
+- 🎯 Делаю **лендинги и Telegram-ботов на заказ** — от идеи до деплоя
+- 🤖 Использую **ИИ-инструменты (Claude, Gemini)** как ускоритель разработки —
+  проектирую, пишу и разбираю код осознанно, а не «копирую вслепую»
 - 🧩 Умею довести идею до **рабочего продукта**: от модели данных до интерфейса
-- 🤖 Использую **ИИ-инструменты (Claude)** как ускоритель разработки — проектирую,
-  пишу и разбираю код осознанно, а не «копирую вслепую»
-- 🎓 Студент направления программной инженерии, активно набираю практику
-- 📈 Сейчас в фокусе: углубляю **Django** и **системный анализ**, готовлю проекты к продакшену
+- 📈 Сейчас в фокусе: углубляю **Django** и системный анализ, готовлю проекты к продакшену
 
 ---
 
@@ -42,33 +38,37 @@
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
 ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)
 ![Express](https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white)
+![Cloudflare](https://img.shields.io/badge/Cloudflare_Pages-F38020?style=for-the-badge&logo=cloudflare&logoColor=white)
 
 **Боты, ИИ и данные**
 ![Telegram](https://img.shields.io/badge/Telegram_Bot_API-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)
 ![aiogram](https://img.shields.io/badge/aiogram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)
 ![Claude](https://img.shields.io/badge/Claude_API-D97757?style=for-the-badge&logo=anthropic&logoColor=white)
+![Gemini](https://img.shields.io/badge/Gemini_API-4285F4?style=for-the-badge&logo=googlegemini&logoColor=white)
 ![SQLite](https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white)
 
-**Инструменты и процессы**
+**Инструменты**
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 ![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
-![Jira](https://img.shields.io/badge/Jira-0052CC?style=for-the-badge&logo=jira&logoColor=white)
 
 ---
 
 ## 📌 Проекты
 
-### 🌐 Веб-платформы
-- **[mechanic-marketplace](https://github.com/bksqj/mechanic-marketplace)** — маркетплейс автоуслуг на **Django**: роли пользователей, заявки на ремонт с жизненным циклом из 7 статусов, чат, каталог, реферальная система. Мой самый крупный проект.
+### 🌐 Веб-платформы и лендинги
+- **[site-generator](https://github.com/bksqj/site-generator)** — Telegram-бот, который превращает описание бизнеса в готовый сайт: генерация контента через **Gemini AI**, автодеплой на **Cloudflare Pages**, админ-панель для владельца.
+- **[mechanic-marketplace](https://github.com/bksqj/mechanic-marketplace)** — маркетплейс автоуслуг на **Django**: роли пользователей, заявки на ремонт с жизненным циклом из 7 статусов, чат, каталог, реферальная система.
 - **[market](https://github.com/bksqj/market)** — фулстек Telegram-магазин: **Express** REST API (модели, роуты, авторизация через Telegram) + фронтенд.
+
+### 🤖 Боты и автоматизация с ИИ
+- **[newwriter2](https://github.com/bksqj/newwriter2)** — Telegram-бот: парсит новости из каналов, переписывает через **Gemini AI** и публикует с фото/видео в свой канал.
+- **[telegram-news-ai-agent](https://github.com/bksqj/telegram-news-ai-agent)** — ИИ-агент: переписывает новости из RSS через **Claude** и публикует в Telegram-канал с ручным апрувом (human-in-the-loop).
+- **[2gis-leads-bot](https://github.com/bksqj/2gis-leads-bot)** — Telegram-бот (**aiogram**) + парсер 2ГИС на **Playwright**: поиск бизнес-лидов без сайта, мини-CRM со статусами, напоминаниями и экспортом в Excel.
+- **[skincare-telegram-bot](https://github.com/bksqj/skincare-telegram-bot)** — Telegram-бот подбора ухода: **aiogram** + веб-админка на **FastAPI** + SQLite + планировщик напоминаний.
 
 ### 🛠️ Инструменты и данные
 - **[multicurrency-calculator](https://github.com/bksqj/multicurrency-calculator)** — настольное приложение (**Python / Tkinter**): чистая слоистая архитектура, конвертация валют по API, покрытие тестами, сборка в `.exe`.
 - **[local-business-leads-collector](https://github.com/bksqj/local-business-leads-collector)** — сбор данных о бизнесе без сайта через **OpenStreetMap (Overpass API)**, выгрузка лидов в CSV/Excel.
-
-### 🤖 Боты и ИИ
-- **[skincare-telegram-bot](https://github.com/bksqj/skincare-telegram-bot)** — Telegram-бот подбора ухода: **aiogram** + веб-админка на **FastAPI** + SQLite + планировщик напоминаний.
-- **[telegram-news-ai-agent](https://github.com/bksqj/telegram-news-ai-agent)** — ИИ-агент: переписывает новости из RSS через **Claude** и публикует в Telegram-канал с ручным апрувом (human-in-the-loop).
 
 ---
 
@@ -79,16 +79,11 @@
   <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=bksqj&layout=compact&hide_border=true&langs_count=8&title_color=1F6FEB" alt="top langs" />
 </p>
 
-<p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=bksqj&theme=flat&no-frame=true&no-bg=true&margin-w=8&row=1&column=6" alt="trophies" />
-</p>
-
 ---
 
 ## 📫 Связь
 
 <p align="center">
-  <a href="mailto:leonardedr@gmail.com"><img src="https://img.shields.io/badge/Email-leonardedr@gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white" /></a>
   <a href="https://t.me/bksqj"><img src="https://img.shields.io/badge/Telegram-@bksqj-26A5E4?style=for-the-badge&logo=telegram&logoColor=white" /></a>
 </p>
 
