@@ -1,7 +1,7 @@
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:1F6FEB,100:1F883D&height=200&section=header&text=bksqj&fontSize=54&fontColor=ffffff&desc=Бизнес-аналитик%20•%20Автоматизация%20процессов%20•%20Python&descSize=17&descAlignY=64" width="100%" />
 
 <p align="center">
-  <a href="https://readme-typing-svg.demolab.com"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1000&color=1F6FEB&center=true&width=620&lines=Анализирую+и+автоматизирую+бизнес-процессы;Опыт+в+Jira+Service+Desk;Django+%E2%80%A2+FastAPI+%E2%80%A2+Python;Делаю+ботов+и+лендинги+на+заказ" alt="typing" /></a>
+  <b>Анализирую и автоматизирую бизнес-процессы</b> · Опыт в Jira Service Desk · Django • FastAPI • Python · Делаю ботов и лендинги на заказ
 </p>
 
 <p align="center">
@@ -82,7 +82,7 @@
 ## 📊 Статистика GitHub
 
 <p align="center">
-  <img height="165" src="https://github-readme-stats-git-master-rickstaa.vercel.app/api?username=bksqj&show_icons=true&hide_border=true&count_private=true&include_all_commits=true&title_color=1F6FEB&icon_color=1F883D" alt="stats" />
+  <img height="165" src="https://github-readme-stats-git-master-rickstaa.vercel.app/api?username=bksqj&show_icons=true&hide_border=true&hide_rank=true&count_private=true&include_all_commits=true&title_color=1F6FEB&icon_color=1F883D" alt="stats" />
   <img height="165" src="https://github-readme-stats-git-master-rickstaa.vercel.app/api/top-langs/?username=bksqj&layout=compact&hide_border=true&langs_count=8&title_color=1F6FEB" alt="top langs" />
 </p>
 
